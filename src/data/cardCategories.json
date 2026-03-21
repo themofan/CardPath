@@ -1,0 +1,31 @@
+{
+  "tiers": [
+    { "id": "starter", "label": "Starter / Student", "description": "Build credit from scratch" },
+    { "id": "mid-tier", "label": "Cashback & Rewards", "description": "Everyday earning power" },
+    { "id": "premium", "label": "Premium", "description": "Travel perks & higher rewards" },
+    { "id": "ultra-premium", "label": "Ultra Premium", "description": "Top-tier perks & status" },
+    { "id": "invite-only", "label": "Invite Only", "description": "Exclusive invitation required" }
+  ],
+  "categories": [
+    { "id": "cashback", "label": "Cash Back", "icon": "💵" },
+    { "id": "travel", "label": "Travel Rewards", "icon": "✈️" },
+    { "id": "dining", "label": "Dining", "icon": "🍽️" },
+    { "id": "groceries", "label": "Groceries", "icon": "🛒" },
+    { "id": "gas", "label": "Gas & Transit", "icon": "⛽" },
+    { "id": "student", "label": "Student", "icon": "🎓" },
+    { "id": "business", "label": "Business", "icon": "💼" },
+    { "id": "hotel", "label": "Hotel", "icon": "🏨" },
+    { "id": "building-credit", "label": "Building Credit", "icon": "📈" }
+  ],
+  "issuers": [
+    "American Express",
+    "Chase",
+    "Citi",
+    "Capital One",
+    "Discover",
+    "Bank of America",
+    "Wells Fargo",
+    "U.S. Bank",
+    "Goldman Sachs"
+  ]
+}

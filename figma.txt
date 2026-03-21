@@ -1,0 +1,419 @@
+/App.tsx
+import { useState, useEffect } from "react";
+import { CPLogin } from "./components/cardpath/CPLogin";
+import { Quiz } from "./components/cardpath/Quiz";
+import { CardPathApp } from "./components/cardpath/CardPathApp";
+import { loadProfile, UserProfile } from "./components/cardpath/data";
+
+type AppState = "login" | "quiz" | "app";
+
+export default function App() {
+  const [state, setState] = useState<AppState>("login");
+  const [profile, setProfile] = useState<UserProfile | null>(null);
+  const [hasExisting, setHasExisting] = useState(false);
+
+  useEffect(() => {
+    const saved = loadProfile();
+    if (saved?.onboardingComplete) {
+      setProfile(saved);
+      setHasExisting(true);
+    } else if (saved) {
+      setHasExisting(true);
+    }
+  }, []);
+
+  const handleLogin = () => {
+    if (profile) {
+      setState("app");
+    } else {
+      setState("quiz");
+    }
+  };
+
+  const handleSignUp = () => {
+    setState("quiz");
+  };
+
+  const handleRestore = () => {
+    const saved = loadProfile();
+    if (saved?.onboardingComplete) {
+      setProfile(saved);
+      setState("app");
+    }
+  };
+
+  const handleQuizComplete = (completed: UserProfile) => {
+    setProfile(completed);
+    setState("app");
+  };
+
+  const handleProfileUpdate = (updated: UserProfile) => {
+    setProfile(updated);
+  };
+
+  const handleRetakeQuiz = () => {
+    setState("quiz");
+  };
+
+  if (state === "login") {
+    return (
+      <CPLogin
+        onLogin={handleLogin}
+        onSignUp={handleSignUp}
+        hasExisting={hasExisting}
+        onRestore={handleRestore}
+      />
+    );
+  }
+
+  if (state === "quiz") {
+    return <Quiz onComplete={handleQuizComplete} />;
+  }
+
+  return (
+    <CardPathApp
+      profile={profile!}
+      onProfileUpdate={handleProfileUpdate}
+      onRetakeQuiz={handleRetakeQuiz}
+    />
+  );
+}
+/components/cardpath/CPLogin.tsx
+import { useState } from "react";
+import { TrendingUp, Shield, Sparkles } from "lucide-react";
+
+interface CPLoginProps {
+  onLogin: () => void;
+  onSignUp: () => void;
+  hasExisting?: boolean;
+  onRestore?: () => void;
+}
+
+const features = [
+  {
+    icon: TrendingUp,
+    title: "Reward Optimizer",
+    desc: "See exactly how much each card earns based on your actual spending",
+  },
+  {
+    icon: Shield,
+    title: "Readiness Scoring",
+    desc: "Know your approval odds before you apply — no wasted hard inquiries",
+  },
+  {
+    icon: Sparkles,
+    title: "AI Path Advisor",
+    desc: "A personalized roadmap from where you are to the card you want",
+  },
+];
+
+export function CPLogin({ onLogin, onSignUp, hasExisting, onRestore }: CPLoginProps) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [forgotMsg, setForgotMsg] = useState(false);
+
+  const handleForgot = () => {
+    setForgotMsg(true);
+    setTimeout(() => setForgotMsg(false), 3000);
+  };
+
+  return (
+    <div
+      className="min-h-screen flex flex-col items-center justify-center p-6 gap-8"
+      style={{ background: "#ffffff" }}
+    >
+      {/* Credit Card */}
+      <div
+        className="relative select-none flex-shrink-0"
+        style={{
+          width: "480px",
+          height: "302px",
+          borderRadius: "20px",
+          background:
+            "linear-gradient(145deg, #2563eb 0%, #1d4ed8 25%, #1e40af 55%, #1e3a8a 80%, #172554 100%)",
+        }}
+      >
+        {/* Top header stripe */}
+        <div
+          className="absolute top-0 left-0 right-0 flex items-center px-6"
+          style={{
+            height: "60px",
+            borderRadius: "20px 20px 0 0",
+            background: "rgba(0,0,0,0.20)",
+          }}
+        >
+          <div className="flex items-center gap-2.5">
+            <div
+              className="w-8 h-8 rounded-lg flex items-center justify-center"
+              style={{
+                background: "rgba(255,255,255,0.12)",
+                border: "1px solid rgba(255,255,255,0.18)",
+              }}
+            >
+              <svg viewBox="0 0 20 20" className="w-4 h-4" fill="rgba(255,255,255,0.9)">
+                <rect x="1" y="5" width="14" height="9" rx="2" />
+                <rect x="5" y="2" width="14" height="9" rx="2" fill="rgba(255,255,255,0.5)" />
+              </svg>
+            </div>
+            <span
+              className="text-white font-bold text-lg"
+              style={{ letterSpacing: "0.22em", fontFamily: "system-ui, sans-serif" }}
+            >
+              CARDPATH
+            </span>
+          </div>
+          <div className="ml-auto flex items-center">
+            <div className="w-8 h-8 rounded-full" style={{ background: "rgba(239,68,68,0.88)" }} />
+            <div className="w-8 h-8 rounded-full -ml-3" style={{ background: "rgba(251,146,60,0.82)" }} />
+          </div>
+        </div>
+
+        {/* EMV Chip */}
+        <div
+          className="absolute"
+          style={{
+            top: "76px",
+            left: "24px",
+            width: "44px",
+            height: "32px",
+            borderRadius: "6px",
+            background: "linear-gradient(150deg, #eab308, #fde68a, #ca8a04)",
+          }}
+        >
+          <div className="absolute inset-1.5 grid grid-cols-3 grid-rows-3 gap-px">
+            {Array(9).fill(null).map((_, i) => (
+              <div key={i} className="rounded-sm" style={{ background: "rgba(92,60,0,0.28)" }} />
+            ))}
+          </div>
+          <div className="absolute left-0 right-0" style={{ top: "33%", height: "1px", background: "rgba(92,60,0,0.18)" }} />
+          <div className="absolute left-0 right-0" style={{ top: "66%", height: "1px", background: "rgba(92,60,0,0.18)" }} />
+        </div>
+
+        {/* Form fields */}
+        <div className="absolute" style={{ top: "126px", left: "24px", right: "24px" }}>
+          <div className="flex gap-5">
+            <div className="flex-1" style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+              <label
+                style={{
+                  fontSize: "9px",
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  color: "rgba(255,255,255,0.45)",
+                  fontWeight: 600,
+                }}
+              >
+                Username
+              </label>
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && onLogin()}
+                placeholder="email@example.com"
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  borderBottom: "1px solid rgba(255,255,255,0.32)",
+                  color: "white",
+                  fontSize: "13px",
+                  paddingBottom: "6px",
+                  outline: "none",
+                  width: "100%",
+                }}
+                className="placeholder-white/25"
+              />
+            </div>
+            <div className="flex-1" style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+              <label
+                style={{
+                  fontSize: "9px",
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  color: "rgba(255,255,255,0.45)",
+                  fontWeight: 600,
+                }}
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && onLogin()}
+                placeholder="••••••••"
+                style={{
+                  background: "transparent",
+                  border: "none",
+                  borderBottom: "1px solid rgba(255,255,255,0.32)",
+                  color: "white",
+                  fontSize: "13px",
+                  paddingBottom: "6px",
+                  outline: "none",
+                  width: "100%",
+                }}
+                className="placeholder-white/25"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Sign In button */}
+        <div className="absolute" style={{ top: "188px", left: "24px", right: "24px" }}>
+          <button
+            onClick={onLogin}
+            className="w-full transition-all hover:scale-[1.02] active:scale-[0.99]"
+            style={{
+              padding: "9px 0",
+              borderRadius: "12px",
+              background: "rgba(255,255,255,0.14)",
+              border: "1px solid rgba(255,255,255,0.22)",
+              color: "white",
+              fontSize: "13px",
+              fontWeight: 600,
+              letterSpacing: "0.06em",
+              cursor: "pointer",
+            }}
+          >
+            Sign In →
+          </button>
+        </div>
+
+        {/* Links */}
+        <div
+          className="absolute flex justify-center gap-8"
+          style={{ top: "234px", left: "24px", right: "24px" }}
+        >
+          <button
+            onClick={onSignUp}
+            style={{ fontSize: "11px", color: "rgba(255,255,255,0.38)", background: "none", border: "none", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: "3px" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.38)")}
+          >
+            Sign up
+          </button>
+          <button
+            onClick={handleForgot}
+            style={{ fontSize: "11px", color: "rgba(255,255,255,0.38)", background: "none", border: "none", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: "3px" }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.38)")}
+          >
+            Forgot password
+          </button>
+          {hasExisting && onRestore && (
+            <button
+              onClick={onRestore}
+              style={{ fontSize: "11px", color: "rgba(255,255,255,0.38)", background: "none", border: "none", cursor: "pointer", textDecoration: "underline", textUnderlineOffset: "3px" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.38)")}
+            >
+              Restore my data
+            </button>
+          )}
+        </div>
+
+        {/* Bottom card meta */}
+        <div
+          className="absolute flex items-end justify-between"
+          style={{ bottom: "14px", left: "24px", right: "24px" }}
+        >
+          <div style={{ fontSize: "10px", letterSpacing: "0.22em", color: "rgba(255,255,255,0.2)", fontFamily: "monospace" }}>
+            •••• •••• •••• 2026
+          </div>
+          <div style={{ textAlign: "right" }}>
+            <div style={{ fontSize: "8px", textTransform: "uppercase", letterSpacing: "0.18em", color: "rgba(255,255,255,0.2)" }}>Valid Thru</div>
+            <div style={{ fontSize: "10px", letterSpacing: "0.12em", color: "rgba(255,255,255,0.25)", fontFamily: "monospace" }}>12/26</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Forgot password toast */}
+      {forgotMsg && (
+        <div
+          className="text-xs px-4 py-2 rounded-xl"
+          style={{ background: "rgba(0,0,0,0.06)", border: "1px solid rgba(0,0,0,0.1)", color: "rgba(0,0,0,0.5)" }}
+        >
+          Reset link sent! (demo — check your inbox)
+        </div>
+      )}
+
+      {/* Feature boxes */}
+      <div style={{ width: "480px" }}>
+        <div className="grid grid-cols-3 gap-3">
+          {features.map((f) => {
+            const Icon = f.icon;
+            return (
+              <div
+                key={f.title}
+                className="rounded-2xl p-4"
+                style={{ background: "#f8f9fa", border: "1px solid #e9ecef" }}
+              >
+                <div
+                  className="w-8 h-8 rounded-xl flex items-center justify-center mb-3"
+                  style={{ background: "#e8f0fe" }}
+                >
+                  <Icon className="w-4 h-4" style={{ color: "#2563eb" }} />
+                </div>
+                <p className="text-xs font-medium text-slate-700 mb-1">{f.title}</p>
+                <p className="text-xs text-slate-400 leading-relaxed">{f.desc}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+/components/cardpath/CardPathApp.tsx
+import { useState } from "react";
+import { CPSidebar } from "./CPSidebar";
+import { CPDashboard } from "./CPDashboard";
+import { CardExplorer } from "./CardExplorer";
+import { PathGraph } from "./PathGraph";
+import { SpendingAnalysis } from "./SpendingAnalysis";
+import { SpendingSimulator } from "./SpendingSimulator";
+import { AIAdvisor } from "./AIAdvisor";
+import { CPSettings } from "./CPSettings";
+import { UserProfile } from "./data";
+
+interface CardPathAppProps {
+  profile: UserProfile;
+  onProfileUpdate: (p: UserProfile) => void;
+  onRetakeQuiz: () => void;
+}
+
+export function CardPathApp({ profile, onProfileUpdate, onRetakeQuiz }: CardPathAppProps) {
+  const [currentPage, setCurrentPage] = useState("dashboard");
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case "dashboard": return <CPDashboard profile={profile} onNavigate={setCurrentPage} />;
+      case "explorer": return <CardExplorer profile={profile} />;
+      case "pathgraph": return <PathGraph profile={profile} />;
+      case "spending": return <SpendingAnalysis profile={profile} onNavigate={setCurrentPage} />;
+      case "simulator": return <SpendingSimulator profile={profile} />;
+      case "advisor": return <AIAdvisor profile={profile} />;
+      case "settings": return <CPSettings profile={profile} onProfileUpdate={onProfileUpdate} onRetakeQuiz={onRetakeQuiz} />;
+      default: return <CPDashboard profile={profile} onNavigate={setCurrentPage} />;
+    }
+  };
+
+  return (
+    <div className="flex h-screen bg-background">
+      <div className="flex-shrink-0">
+        <CPSidebar currentPage={currentPage} onPageChange={setCurrentPage} />
+      </div>
+      <main className="flex-1 overflow-auto">
+        {renderPage()}
+      </main>
+    </div>
+  );
+}
+The remaining files (data.ts, Quiz.tsx, CPDashboard.tsx, CPSidebar.tsx, CPSettings.tsx, CardExplorer.tsx, PathGraph.tsx, SpendingAnalysis.tsx, SpendingSimulator.tsx, AIAdvisor.tsx) are large — paste them below as-is from what was shown above in my read output. They have zero modifications from what's currently on disk.
+
+How to use this in Claude Code
+Give Claude this prompt to get started:
+
+"I have a CardPath credit card recommendation app built in React + Tailwind CSS. Here are all the files. Please read them carefully, understand the full architecture and data flow, then help me reorganize and redesign. The app has: a login page (CPLogin.tsx), a 6-step quiz (Quiz.tsx), and a main app shell (CardPathApp.tsx) with a collapsible sidebar (CPSidebar.tsx) and 7 pages: Dashboard, Card Explorer, Path Graph (SVG graph), Spending Analysis, Spending Simulator, AI Advisor, and Settings. Data lives in data.ts (10 cards, scoring functions, localStorage persistence). The design uses a green CSS variable theme (--primary = green). App state: login → quiz (new user) or app (returning user). [paste files here]"
+
+
+

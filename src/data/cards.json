@@ -1,0 +1,3345 @@
+[
+  {
+    "id": "discover-it-student",
+    "name": "Discover it® Student Cash Back",
+    "issuer": "Discover",
+    "network": "Discover",
+    "tier": "starter",
+    "annualFee": 0,
+    "introAPR": "0% for 6 months",
+    "ongoingAPR": "18.24% - 27.24%",
+    "creditScoreMin": 630,
+    "creditScoreIdeal": 670,
+    "estimatedIncomeReq": null,
+    "minCreditHistoryMonths": 0,
+    "typicalCreditLimit": {
+      "min": 500,
+      "max": 3000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Rotating quarterly (activated)",
+          "rate": "5%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "Cashback Match: Discover matches ALL cash back earned at end of first year"
+    },
+    "signUpBonus": "Cashback Match first year",
+    "signUpSpendReq": null,
+    "perks": [
+      "No annual fee",
+      "Cashback Match first year",
+      "Free FICO score",
+      "No foreign transaction fees",
+      "Good Grades Reward: $20 statement credit each school year"
+    ],
+    "pros": [
+      "Great first card",
+      "No annual fee",
+      "First-year double cashback",
+      "No credit history required"
+    ],
+    "cons": [
+      "Discover less widely accepted",
+      "5% categories rotate and need activation",
+      "Lower base earn rate"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#FF6B00"
+  },
+  {
+    "id": "discover-it-secured",
+    "name": "Discover it® Secured Credit Card",
+    "issuer": "Discover",
+    "network": "Discover",
+    "tier": "starter",
+    "annualFee": 0,
+    "introAPR": null,
+    "ongoingAPR": "28.24%",
+    "creditScoreMin": 300,
+    "creditScoreIdeal": 500,
+    "estimatedIncomeReq": null,
+    "minCreditHistoryMonths": 0,
+    "typicalCreditLimit": {
+      "min": 200,
+      "max": 2500
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Gas stations & restaurants",
+          "rate": "2%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "Cashback Match first year"
+    },
+    "signUpBonus": "Cashback Match first year",
+    "signUpSpendReq": null,
+    "perks": [
+      "No annual fee",
+      "Cashback Match first year",
+      "Free FICO score",
+      "Automatic review for upgrade to unsecured"
+    ],
+    "pros": [
+      "No credit needed",
+      "Earns rewards unlike most secured cards",
+      "Path to unsecured card",
+      "No annual fee"
+    ],
+    "cons": [
+      "Requires security deposit ($200-$2500)",
+      "High APR",
+      "Discover acceptance"
+    ],
+    "specialRequirements": "Requires refundable security deposit",
+    "imageColor": "#FF6B00"
+  },
+  {
+    "id": "capital-one-journey",
+    "name": "Capital One Quicksilver Student",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "tier": "starter",
+    "annualFee": 0,
+    "introAPR": null,
+    "ongoingAPR": "19.99% - 29.99%",
+    "creditScoreMin": 630,
+    "creditScoreIdeal": 670,
+    "estimatedIncomeReq": null,
+    "minCreditHistoryMonths": 0,
+    "typicalCreditLimit": {
+      "min": 500,
+      "max": 3000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "All purchases",
+          "rate": "1.5%"
+        }
+      ],
+      "notes": "Flat rate on everything, simple to use"
+    },
+    "signUpBonus": "$50 after $100 spend in 3 months",
+    "signUpSpendReq": 100,
+    "perks": [
+      "No annual fee",
+      "No foreign transaction fees",
+      "Auto credit line review after 6 months"
+    ],
+    "pros": [
+      "Simple flat rate",
+      "Easy approval for students",
+      "Mastercard acceptance",
+      "No foreign transaction fees"
+    ],
+    "cons": [
+      "1.5% is decent but not top-tier",
+      "No bonus categories"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#004977"
+  },
+  {
+    "id": "capital-one-platinum-secured",
+    "name": "Capital One Platinum Secured",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "tier": "starter",
+    "annualFee": 0,
+    "introAPR": null,
+    "ongoingAPR": "30.49%",
+    "creditScoreMin": 300,
+    "creditScoreIdeal": 500,
+    "estimatedIncomeReq": null,
+    "minCreditHistoryMonths": 0,
+    "typicalCreditLimit": {
+      "min": 200,
+      "max": 2500
+    },
+    "rewards": {
+      "categories": [],
+      "notes": "No rewards program"
+    },
+    "signUpBonus": null,
+    "signUpSpendReq": null,
+    "perks": [
+      "No annual fee",
+      "Access to higher credit line after making first 5 monthly payments on time",
+      "CreditWise monitoring"
+    ],
+    "pros": [
+      "Low deposit ($49-$200)",
+      "No credit history required",
+      "Path to unsecured upgrade",
+      "No annual fee"
+    ],
+    "cons": [
+      "No rewards",
+      "High APR",
+      "Very basic card"
+    ],
+    "specialRequirements": "Requires refundable security deposit starting at $49",
+    "imageColor": "#004977"
+  },
+  {
+    "id": "chase-freedom-rise",
+    "name": "Chase Freedom Rise℠",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "starter",
+    "annualFee": 0,
+    "introAPR": null,
+    "ongoingAPR": "24.49% - 31.49%",
+    "creditScoreMin": 630,
+    "creditScoreIdeal": 670,
+    "estimatedIncomeReq": null,
+    "minCreditHistoryMonths": 0,
+    "typicalCreditLimit": {
+      "min": 500,
+      "max": 3000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "All purchases",
+          "rate": "1.5%"
+        }
+      ],
+      "notes": "Earns Chase Ultimate Rewards points"
+    },
+    "signUpBonus": null,
+    "signUpSpendReq": null,
+    "perks": [
+      "No annual fee",
+      "Free credit score",
+      "Entry to Chase ecosystem",
+      "Auto review for upgrade"
+    ],
+    "pros": [
+      "Entry into Chase ecosystem",
+      "Earns Ultimate Rewards",
+      "No annual fee",
+      "Good for building credit"
+    ],
+    "cons": [
+      "No sign-up bonus",
+      "No bonus categories",
+      "Need to be new to Chase"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#1A4B8C"
+  },
+  {
+    "id": "chase-freedom-unlimited",
+    "name": "Chase Freedom Unlimited®",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 15 months",
+    "ongoingAPR": "20.49% - 29.24%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Travel (booked via Chase)",
+          "rate": "5%"
+        },
+        {
+          "category": "Dining",
+          "rate": "3%"
+        },
+        {
+          "category": "Drugstores",
+          "rate": "3%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1.5%"
+        }
+      ],
+      "notes": "Points worth more when paired with Sapphire cards"
+    },
+    "signUpBonus": "$300 after $500 spend in 3 months",
+    "signUpSpendReq": 500,
+    "perks": [
+      "No annual fee",
+      "0% intro APR 15 months",
+      "Purchase protection",
+      "Extended warranty"
+    ],
+    "pros": [
+      "Excellent no-annual-fee card",
+      "Strong bonus categories",
+      "Pairs with Sapphire",
+      "Good sign-up bonus"
+    ],
+    "cons": [
+      "Need decent credit",
+      "Chase 5/24 rule applies",
+      "Foreign transaction fees"
+    ],
+    "specialRequirements": "Subject to Chase 5/24 rule",
+    "imageColor": "#1A4B8C"
+  },
+  {
+    "id": "chase-freedom-flex",
+    "name": "Chase Freedom Flex℠",
+    "issuer": "Chase",
+    "network": "Mastercard",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 15 months",
+    "ongoingAPR": "20.49% - 29.24%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Rotating quarterly (activated)",
+          "rate": "5%"
+        },
+        {
+          "category": "Travel (booked via Chase)",
+          "rate": "5%"
+        },
+        {
+          "category": "Dining",
+          "rate": "3%"
+        },
+        {
+          "category": "Drugstores",
+          "rate": "3%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "5% quarterly categories need activation, $1500 cap per quarter"
+    },
+    "signUpBonus": "$200 after $500 spend in 3 months",
+    "signUpSpendReq": 500,
+    "perks": [
+      "No annual fee",
+      "0% intro APR 15 months",
+      "Cell phone protection",
+      "Trip cancellation insurance"
+    ],
+    "pros": [
+      "5% rotating + 3% dining",
+      "Cell phone protection rare at $0 AF",
+      "Chase ecosystem",
+      "0% intro APR"
+    ],
+    "cons": [
+      "Quarterly categories need activation",
+      "5% has $1500 cap",
+      "Chase 5/24 rule"
+    ],
+    "specialRequirements": "Subject to Chase 5/24 rule",
+    "imageColor": "#1A4B8C"
+  },
+  {
+    "id": "chase-sapphire-preferred",
+    "name": "Chase Sapphire Preferred®",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 95,
+    "introAPR": null,
+    "ongoingAPR": "22.49% - 29.49%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 740,
+    "estimatedIncomeReq": 40000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Travel (booked via Chase)",
+          "rate": "5x"
+        },
+        {
+          "category": "Dining",
+          "rate": "3x"
+        },
+        {
+          "category": "Online grocery",
+          "rate": "3x"
+        },
+        {
+          "category": "Streaming",
+          "rate": "3x"
+        },
+        {
+          "category": "All other travel",
+          "rate": "2x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "Points worth 25% more through Chase Travel portal"
+    },
+    "signUpBonus": "60,000 points after $4,000 spend in 3 months",
+    "signUpSpendReq": 4000,
+    "perks": [
+      "$50 Chase Travel hotel credit annually",
+      "Points worth 25% more via Chase Travel",
+      "No foreign transaction fees",
+      "Trip cancellation/interruption insurance",
+      "Primary rental car insurance"
+    ],
+    "pros": [
+      "Best mid-tier travel card",
+      "Huge sign-up bonus",
+      "Primary rental car insurance",
+      "Transfer partners"
+    ],
+    "cons": [
+      "$95 annual fee",
+      "$4K spend requirement for SUB",
+      "Chase 5/24 rule"
+    ],
+    "specialRequirements": "Subject to Chase 5/24 rule. Cannot hold Sapphire Reserve simultaneously (one Sapphire rule).",
+    "imageColor": "#1A4B8C"
+  },
+  {
+    "id": "chase-sapphire-reserve",
+    "name": "Chase Sapphire Reserve®",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "premium",
+    "annualFee": 550,
+    "introAPR": null,
+    "ongoingAPR": "22.49% - 29.49%",
+    "creditScoreMin": 740,
+    "creditScoreIdeal": 780,
+    "estimatedIncomeReq": 75000,
+    "minCreditHistoryMonths": 36,
+    "typicalCreditLimit": {
+      "min": 10000,
+      "max": 50000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Travel (booked via Chase)",
+          "rate": "10x"
+        },
+        {
+          "category": "Hotels & car rentals (via Chase)",
+          "rate": "10x"
+        },
+        {
+          "category": "Dining",
+          "rate": "3x"
+        },
+        {
+          "category": "All other travel",
+          "rate": "3x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "Points worth 50% more through Chase Travel portal"
+    },
+    "signUpBonus": "60,000 points after $4,000 spend in 3 months",
+    "signUpSpendReq": 4000,
+    "perks": [
+      "$300 annual travel credit",
+      "Priority Pass lounge access",
+      "Global Entry/TSA PreCheck credit",
+      "Points worth 50% more via Chase Travel",
+      "Primary rental car insurance",
+      "Trip delay/cancellation insurance",
+      "DoorDash DashPass"
+    ],
+    "pros": [
+      "Premium travel perks",
+      "Effective $250 AF after travel credit",
+      "Best Chase point value",
+      "Airport lounges"
+    ],
+    "cons": [
+      "$550 annual fee upfront",
+      "High income/score needed",
+      "One Sapphire rule"
+    ],
+    "specialRequirements": "Subject to Chase 5/24 rule. One Sapphire rule (cannot hold Preferred simultaneously).",
+    "imageColor": "#1A4B8C"
+  },
+  {
+    "id": "amex-blue-cash-everyday",
+    "name": "Amex Blue Cash Everyday®",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 15 months",
+    "ongoingAPR": "19.24% - 29.99%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "U.S. supermarkets (up to $6K/yr)",
+          "rate": "3%"
+        },
+        {
+          "category": "U.S. online retail",
+          "rate": "3%"
+        },
+        {
+          "category": "U.S. gas stations",
+          "rate": "3%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "Cash back earned as Reward Dollars"
+    },
+    "signUpBonus": "$200 after $2,000 spend in 6 months",
+    "signUpSpendReq": 2000,
+    "perks": [
+      "No annual fee",
+      "0% intro APR",
+      "Return protection",
+      "Purchase protection"
+    ],
+    "pros": [
+      "No annual fee",
+      "3% at supermarkets and gas",
+      "Good intro APR",
+      "Amex protections"
+    ],
+    "cons": [
+      "$6K cap on grocery bonus",
+      "Amex acceptance slightly lower",
+      "Foreign transaction fees"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#006FCF"
+  },
+  {
+    "id": "amex-blue-cash-preferred",
+    "name": "Amex Blue Cash Preferred®",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "mid-tier",
+    "annualFee": 95,
+    "introAPR": "0% for 12 months",
+    "ongoingAPR": "19.24% - 29.99%",
+    "creditScoreMin": 690,
+    "creditScoreIdeal": 720,
+    "estimatedIncomeReq": 35000,
+    "minCreditHistoryMonths": 18,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "U.S. supermarkets (up to $6K/yr)",
+          "rate": "6%"
+        },
+        {
+          "category": "U.S. streaming",
+          "rate": "6%"
+        },
+        {
+          "category": "U.S. gas stations",
+          "rate": "3%"
+        },
+        {
+          "category": "Transit",
+          "rate": "3%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "Best cash back rate for groceries"
+    },
+    "signUpBonus": "$350 after $3,000 spend in 6 months",
+    "signUpSpendReq": 3000,
+    "perks": [
+      "0% intro APR 12 months",
+      "Return protection",
+      "Purchase protection",
+      "Extended warranty",
+      "6% on streaming"
+    ],
+    "pros": [
+      "Best grocery cashback card",
+      "6% streaming",
+      "Strong sign-up bonus",
+      "Good for families"
+    ],
+    "cons": [
+      "$95 annual fee",
+      "$6K grocery cap",
+      "Not great outside bonus categories",
+      "Foreign transaction fees"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#006FCF"
+  },
+  {
+    "id": "amex-gold",
+    "name": "American Express® Gold Card",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "premium",
+    "annualFee": 325,
+    "introAPR": null,
+    "ongoingAPR": "N/A (charge card)",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 750,
+    "estimatedIncomeReq": 50000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": null,
+    "rewards": {
+      "categories": [
+        {
+          "category": "Restaurants worldwide",
+          "rate": "4x"
+        },
+        {
+          "category": "U.S. supermarkets (up to $25K/yr)",
+          "rate": "4x"
+        },
+        {
+          "category": "Flights booked directly",
+          "rate": "3x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "Membership Rewards points transferable to 17+ airline/hotel partners"
+    },
+    "signUpBonus": "60,000 MR points after $6,000 spend in 6 months",
+    "signUpSpendReq": 6000,
+    "perks": [
+      "$120 Uber Cash annually ($10/mo)",
+      "$120 dining credit annually ($10/mo)",
+      "No foreign transaction fees",
+      "Transfer to airline/hotel partners"
+    ],
+    "pros": [
+      "Best dining card",
+      "Huge grocery multiplier",
+      "$240 in annual credits offset fee",
+      "Transfer partners"
+    ],
+    "cons": [
+      "$325 annual fee",
+      "Amex acceptance",
+      "Credits are use-it-or-lose-it monthly",
+      "No lounge access"
+    ],
+    "specialRequirements": "Subject to Amex 1/5 rule (1 card of same product per 5 years)",
+    "imageColor": "#B5985A"
+  },
+  {
+    "id": "amex-platinum",
+    "name": "The Platinum Card® from Amex",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "ultra-premium",
+    "annualFee": 695,
+    "introAPR": null,
+    "ongoingAPR": "N/A (charge card)",
+    "creditScoreMin": 740,
+    "creditScoreIdeal": 780,
+    "estimatedIncomeReq": 80000,
+    "minCreditHistoryMonths": 36,
+    "typicalCreditLimit": null,
+    "rewards": {
+      "categories": [
+        {
+          "category": "Flights booked directly or via Amex Travel",
+          "rate": "5x"
+        },
+        {
+          "category": "Prepaid hotels via Amex Travel",
+          "rate": "5x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "Best travel perks card. MR points transfer to 17+ partners"
+    },
+    "signUpBonus": "80,000 MR points after $8,000 spend in 6 months",
+    "signUpSpendReq": 8000,
+    "perks": [
+      "$200 airline fee credit",
+      "$200 hotel credit (FHR/THC)",
+      "$200 Uber Cash ($15/mo + $20 Dec)",
+      "$155 Walmart+ credit",
+      "$240 digital entertainment credit",
+      "Centurion Lounge access",
+      "Priority Pass",
+      "Global Entry/TSA PreCheck",
+      "Hotel elite status (Hilton Gold, Marriott Gold)"
+    ],
+    "pros": [
+      "Unmatched travel perks",
+      "Over $1400 in annual credits",
+      "Best airport lounge access",
+      "Hotel elite statuses"
+    ],
+    "cons": [
+      "$695 annual fee",
+      "Must use credits to get value",
+      "Only 1x on most spending",
+      "Amex acceptance"
+    ],
+    "specialRequirements": "Subject to Amex 1/5 rule",
+    "imageColor": "#B5985A"
+  },
+  {
+    "id": "amex-centurion",
+    "name": "Amex Centurion (Black Card)",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "invite-only",
+    "annualFee": 5000,
+    "introAPR": null,
+    "ongoingAPR": "N/A (charge card)",
+    "creditScoreMin": 780,
+    "creditScoreIdeal": 800,
+    "estimatedIncomeReq": 250000,
+    "minCreditHistoryMonths": 60,
+    "typicalCreditLimit": null,
+    "rewards": {
+      "categories": [
+        {
+          "category": "All purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "Perks are the main draw, not rewards rate"
+    },
+    "signUpBonus": null,
+    "signUpSpendReq": null,
+    "perks": [
+      "$5,000 initiation fee",
+      "Dedicated concierge",
+      "Centurion Lounge + Delta Sky Club access",
+      "Top-tier hotel statuses",
+      "Global Entry credit",
+      "Exclusive events access"
+    ],
+    "pros": [
+      "Ultimate status card",
+      "Best concierge service",
+      "Exclusive access"
+    ],
+    "cons": [
+      "$5,000 initiation + $5,000 annual fee",
+      "Invitation only",
+      "Need $250K+ Amex spend",
+      "Not practical for most people"
+    ],
+    "specialRequirements": "Invitation only. Requires ~$250,000+ annual spend on Amex cards. $5,000 initiation fee.",
+    "imageColor": "#1A1A1A"
+  },
+  {
+    "id": "citi-custom-cash",
+    "name": "Citi Custom Cash® Card",
+    "issuer": "Citi",
+    "network": "Mastercard",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 15 months",
+    "ongoingAPR": "19.24% - 29.24%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Top eligible spend category each cycle (up to $500)",
+          "rate": "5%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "Automatically earns 5% on your highest spend category each billing cycle: restaurants, gas, groceries, travel, transit, streaming, drugstores, home improvement, fitness, entertainment"
+    },
+    "signUpBonus": "$200 after $1,500 spend in 6 months",
+    "signUpSpendReq": 1500,
+    "perks": [
+      "No annual fee",
+      "0% intro APR 15 months",
+      "Auto top-category detection",
+      "Citi Entertainment access"
+    ],
+    "pros": [
+      "Auto 5% on top category",
+      "No annual fee",
+      "0% intro APR",
+      "No activation needed"
+    ],
+    "cons": [
+      "$500 monthly cap on 5%",
+      "Only 1% outside top category",
+      "Need to know your spending"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#003B70"
+  },
+  {
+    "id": "citi-double-cash",
+    "name": "Citi® Double Cash Card",
+    "issuer": "Citi",
+    "network": "Mastercard",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 18 months on balance transfers",
+    "ongoingAPR": "19.24% - 29.24%",
+    "creditScoreMin": 680,
+    "creditScoreIdeal": 710,
+    "estimatedIncomeReq": 30000,
+    "minCreditHistoryMonths": 18,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "All purchases (1% when you buy + 1% when you pay)",
+          "rate": "2%"
+        }
+      ],
+      "notes": "Can earn ThankYou points if paired with Citi Premier"
+    },
+    "signUpBonus": "$200 after $1,500 spend in 6 months",
+    "signUpSpendReq": 1500,
+    "perks": [
+      "No annual fee",
+      "Flat 2% everything",
+      "Balance transfer intro APR",
+      "Citi Entertainment"
+    ],
+    "pros": [
+      "Simple 2% on everything",
+      "No annual fee",
+      "No categories to track",
+      "Good balance transfer card"
+    ],
+    "cons": [
+      "Need to pay bill to get full 2%",
+      "No intro purchase APR",
+      "Foreign transaction fees"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#003B70"
+  },
+  {
+    "id": "citi-premier",
+    "name": "Citi Premier® Card",
+    "issuer": "Citi",
+    "network": "Mastercard",
+    "tier": "premium",
+    "annualFee": 95,
+    "introAPR": null,
+    "ongoingAPR": "21.24% - 29.24%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 740,
+    "estimatedIncomeReq": 45000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Restaurants",
+          "rate": "3x"
+        },
+        {
+          "category": "Supermarkets",
+          "rate": "3x"
+        },
+        {
+          "category": "Gas stations",
+          "rate": "3x"
+        },
+        {
+          "category": "Air travel & hotels",
+          "rate": "3x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "ThankYou points transfer to airline/hotel partners"
+    },
+    "signUpBonus": "60,000 ThankYou points after $4,000 spend in 3 months",
+    "signUpSpendReq": 4000,
+    "perks": [
+      "No foreign transaction fees",
+      "$100 annual hotel savings benefit",
+      "Transfer to travel partners",
+      "Citi Entertainment"
+    ],
+    "pros": [
+      "3x on many everyday categories",
+      "No foreign transaction fees",
+      "Transfer partners",
+      "Good SUB"
+    ],
+    "cons": [
+      "$95 annual fee",
+      "No lounge access",
+      "Citi partner list smaller than Chase/Amex"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#003B70"
+  },
+  {
+    "id": "capital-one-savor-one",
+    "name": "Capital One SavorOne Cash Rewards",
+    "issuer": "Capital One",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 15 months",
+    "ongoingAPR": "19.99% - 29.99%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Dining & entertainment",
+          "rate": "3%"
+        },
+        {
+          "category": "Grocery stores",
+          "rate": "3%"
+        },
+        {
+          "category": "Streaming",
+          "rate": "3%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "No caps on cash back earned"
+    },
+    "signUpBonus": "$200 after $500 spend in 3 months",
+    "signUpSpendReq": 500,
+    "perks": [
+      "No annual fee",
+      "0% intro APR 15 months",
+      "No foreign transaction fees",
+      "No caps on rewards"
+    ],
+    "pros": [
+      "3% dining + groceries + streaming with no AF",
+      "Easy $500 SUB requirement",
+      "No foreign transaction fees"
+    ],
+    "cons": [
+      "Only 1% on non-bonus",
+      "Not ideal for travel rewards",
+      "Capital One limited transfer partners"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#004977"
+  },
+  {
+    "id": "capital-one-venture-one",
+    "name": "Capital One VentureOne Rewards",
+    "issuer": "Capital One",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 15 months",
+    "ongoingAPR": "19.99% - 29.99%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 710,
+    "estimatedIncomeReq": 30000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Hotels & rental cars via Capital One Travel",
+          "rate": "5x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1.25x"
+        }
+      ],
+      "notes": "Miles worth 1 cent each for travel redemption"
+    },
+    "signUpBonus": "20,000 miles after $500 spend in 3 months",
+    "signUpSpendReq": 500,
+    "perks": [
+      "No annual fee",
+      "0% intro APR 15 months",
+      "No foreign transaction fees"
+    ],
+    "pros": [
+      "No annual fee travel card",
+      "Decent base earn",
+      "No foreign transaction fees"
+    ],
+    "cons": [
+      "Lower earn rates than Venture X",
+      "Limited transfer partner value",
+      "1.25x is okay not great"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#004977"
+  },
+  {
+    "id": "capital-one-venture",
+    "name": "Capital One Venture Rewards",
+    "issuer": "Capital One",
+    "network": "Visa",
+    "tier": "premium",
+    "annualFee": 95,
+    "introAPR": null,
+    "ongoingAPR": "19.99% - 29.99%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 740,
+    "estimatedIncomeReq": 50000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Hotels & rental cars via Capital One Travel",
+          "rate": "5x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "2x"
+        }
+      ],
+      "notes": "Transfer to 15+ airline/hotel partners"
+    },
+    "signUpBonus": "75,000 miles after $4,000 spend in 3 months",
+    "signUpSpendReq": 4000,
+    "perks": [
+      "Transfer partners",
+      "No foreign transaction fees",
+      "Global Entry/TSA PreCheck credit"
+    ],
+    "pros": [
+      "Simple 2x everything",
+      "75K mile SUB",
+      "Transfer partners",
+      "Global Entry credit"
+    ],
+    "cons": [
+      "$95 annual fee",
+      "2x solid but not category-leading",
+      "No lounge access"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#004977"
+  },
+  {
+    "id": "capital-one-venture-x",
+    "name": "Capital One Venture X Rewards",
+    "issuer": "Capital One",
+    "network": "Visa",
+    "tier": "ultra-premium",
+    "annualFee": 395,
+    "introAPR": null,
+    "ongoingAPR": "19.99% - 29.99%",
+    "creditScoreMin": 740,
+    "creditScoreIdeal": 780,
+    "estimatedIncomeReq": 80000,
+    "minCreditHistoryMonths": 36,
+    "typicalCreditLimit": {
+      "min": 10000,
+      "max": 100000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Flights via Capital One Travel",
+          "rate": "10x"
+        },
+        {
+          "category": "Hotels & rental cars via Capital One Travel",
+          "rate": "5x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "2x"
+        }
+      ],
+      "notes": "10,000 bonus miles on anniversary. Transfer partners."
+    },
+    "signUpBonus": "75,000 miles after $4,000 spend in 3 months",
+    "signUpSpendReq": 4000,
+    "perks": [
+      "$300 travel credit via Capital One Travel",
+      "Capital One Lounges",
+      "Priority Pass",
+      "10,000 anniversary miles",
+      "Global Entry/TSA PreCheck credit",
+      "Hertz President's Circle"
+    ],
+    "pros": [
+      "Effective $95 AF after credits",
+      "Capital One Lounges growing",
+      "2x on everything",
+      "Anniversary miles"
+    ],
+    "cons": [
+      "$395 upfront",
+      "Must book via portal for bonus rates",
+      "Lounge network still small"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#004977"
+  },
+  {
+    "id": "boa-customized-cash",
+    "name": "Bank of America® Customized Cash Rewards",
+    "issuer": "Bank of America",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 15 billing cycles",
+    "ongoingAPR": "19.24% - 29.24%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Choice category (gas, online shopping, dining, travel, drug stores, home improvement)",
+          "rate": "3%"
+        },
+        {
+          "category": "Grocery stores & wholesale clubs",
+          "rate": "2%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "Choose your 3% category. Preferred Rewards can boost rates up to 75%"
+    },
+    "signUpBonus": "$200 after $1,000 spend in 90 days",
+    "signUpSpendReq": 1000,
+    "perks": [
+      "No annual fee",
+      "0% intro APR",
+      "Choose your own 3% category",
+      "Preferred Rewards eligible"
+    ],
+    "pros": [
+      "Pick your own bonus category",
+      "Preferred Rewards boosts up to 5.25%",
+      "Easy SUB requirement"
+    ],
+    "cons": [
+      "Combined $2,500 quarterly cap on 2%/3%",
+      "Preferred Rewards needs $20K+ with BofA",
+      "Foreign transaction fees"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#E31837"
+  },
+  {
+    "id": "boa-premium-rewards",
+    "name": "Bank of America® Premium Rewards®",
+    "issuer": "Bank of America",
+    "network": "Visa",
+    "tier": "premium",
+    "annualFee": 95,
+    "introAPR": null,
+    "ongoingAPR": "19.24% - 29.24%",
+    "creditScoreMin": 720,
+    "creditScoreIdeal": 750,
+    "estimatedIncomeReq": 50000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Travel & dining",
+          "rate": "2 points/$1"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1.5 points/$1"
+        }
+      ],
+      "notes": "Preferred Rewards can boost rates significantly"
+    },
+    "signUpBonus": "60,000 points after $4,000 spend in 90 days",
+    "signUpSpendReq": 4000,
+    "perks": [
+      "$100 airline incidental credit",
+      "Global Entry/TSA PreCheck credit",
+      "No foreign transaction fees",
+      "Preferred Rewards eligible"
+    ],
+    "pros": [
+      "Good for BofA Preferred Rewards members",
+      "Airline credit + Global Entry",
+      "1.5x base on everything"
+    ],
+    "cons": [
+      "Points value lower than Chase/Amex",
+      "Need BofA relationship for best value",
+      "No transfer partners"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#E31837"
+  },
+  {
+    "id": "wells-fargo-active-cash",
+    "name": "Wells Fargo Active Cash®",
+    "issuer": "Wells Fargo",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 15 months",
+    "ongoingAPR": "20.24% - 29.99%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "All purchases",
+          "rate": "2%"
+        }
+      ],
+      "notes": "Flat 2% unlimited cash rewards"
+    },
+    "signUpBonus": "$200 after $500 spend in 3 months",
+    "signUpSpendReq": 500,
+    "perks": [
+      "No annual fee",
+      "0% intro APR 15 months",
+      "Cell phone protection",
+      "Visa Signature benefits"
+    ],
+    "pros": [
+      "Simple 2% on everything",
+      "Cell phone protection",
+      "Easy SUB requirement",
+      "No annual fee"
+    ],
+    "cons": [
+      "No bonus categories",
+      "Foreign transaction fees",
+      "Wells Fargo reputation"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#CC0000"
+  },
+  {
+    "id": "wells-fargo-autograph",
+    "name": "Wells Fargo Autograph℠ Card",
+    "issuer": "Wells Fargo",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 12 months",
+    "ongoingAPR": "20.24% - 29.99%",
+    "creditScoreMin": 680,
+    "creditScoreIdeal": 710,
+    "estimatedIncomeReq": 30000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Restaurants, travel, gas, transit, streaming, phone plans",
+          "rate": "3x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "Points can be redeemed for travel at potentially higher value"
+    },
+    "signUpBonus": "20,000 bonus points after $1,000 spend in 3 months",
+    "signUpSpendReq": 1000,
+    "perks": [
+      "No annual fee",
+      "Cell phone protection",
+      "0% intro APR 12 months",
+      "No foreign transaction fees"
+    ],
+    "pros": [
+      "3x on 6 categories with no AF",
+      "Cell phone protection",
+      "No foreign transaction fees"
+    ],
+    "cons": [
+      "Only 1x outside categories",
+      "Points value not as good as Chase/Amex",
+      "No transfer partners yet"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#CC0000"
+  },
+  {
+    "id": "us-bank-altitude-go",
+    "name": "U.S. Bank Altitude® Go Visa",
+    "issuer": "U.S. Bank",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 15 billing cycles",
+    "ongoingAPR": "19.24% - 29.24%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Dining",
+          "rate": "4x"
+        },
+        {
+          "category": "Grocery delivery, streaming, gas",
+          "rate": "2x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "4x dining is among the best for no-annual-fee cards"
+    },
+    "signUpBonus": "$25 after first purchase",
+    "signUpSpendReq": 1,
+    "perks": [
+      "No annual fee",
+      "0% intro APR",
+      "4x dining no AF",
+      "No foreign transaction fees"
+    ],
+    "pros": [
+      "Best no-AF dining rate (4x)",
+      "Easy sign-up bonus",
+      "No foreign transaction fees"
+    ],
+    "cons": [
+      "Small SUB",
+      "US Bank has limited branch presence",
+      "1x base rate"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#D71E2B"
+  },
+  {
+    "id": "apple-card",
+    "name": "Apple Card",
+    "issuer": "Goldman Sachs",
+    "network": "Mastercard",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": null,
+    "ongoingAPR": "19.24% - 29.49%",
+    "creditScoreMin": 660,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 20000,
+    "minCreditHistoryMonths": 6,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Apple purchases",
+          "rate": "3%"
+        },
+        {
+          "category": "Apple Pay purchases",
+          "rate": "2%"
+        },
+        {
+          "category": "Physical card purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "Daily Cash paid out daily, not monthly"
+    },
+    "signUpBonus": null,
+    "signUpSpendReq": null,
+    "perks": [
+      "No annual fee",
+      "No foreign transaction fees",
+      "Daily Cash rewards",
+      "Titanium card",
+      "Built into Apple Wallet"
+    ],
+    "pros": [
+      "Clean UI in Apple Wallet",
+      "Daily Cash is nice",
+      "No fees at all",
+      "Easy approval"
+    ],
+    "cons": [
+      "Need iPhone",
+      "No SUB",
+      "Must use Apple Pay for 2%",
+      "Only 1% with physical card"
+    ],
+    "specialRequirements": "Requires iPhone with Apple Wallet",
+    "imageColor": "#333333"
+  },
+  {
+    "id": "amazon-prime-visa",
+    "name": "Amazon Prime Visa",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": null,
+    "ongoingAPR": "19.49% - 27.49%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 710,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Amazon.com & Whole Foods",
+          "rate": "5%"
+        },
+        {
+          "category": "Travel (via Chase)",
+          "rate": "5%"
+        },
+        {
+          "category": "Restaurants, gas, transit",
+          "rate": "2%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "Requires Amazon Prime membership ($139/yr)"
+    },
+    "signUpBonus": "$150 Amazon Gift Card upon approval",
+    "signUpSpendReq": null,
+    "perks": [
+      "No annual fee (card itself)",
+      "5% at Amazon",
+      "No foreign transaction fees",
+      "Purchase protection"
+    ],
+    "pros": [
+      "5% at Amazon is unbeatable",
+      "Instant approval for Amazon credit",
+      "No card annual fee"
+    ],
+    "cons": [
+      "Requires $139/yr Prime",
+      "Amazon-centric rewards",
+      "Chase 5/24 rule"
+    ],
+    "specialRequirements": "Requires active Amazon Prime membership",
+    "imageColor": "#232F3E",
+    "active": false
+  },
+  {
+    "id": "costco-anywhere-visa",
+    "name": "Costco Anywhere Visa® by Citi",
+    "issuer": "Citi",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": null,
+    "ongoingAPR": "20.49%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 730,
+    "estimatedIncomeReq": 30000,
+    "minCreditHistoryMonths": 18,
+    "typicalCreditLimit": {
+      "min": 3000,
+      "max": 15000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Gas (up to $7K/yr)",
+          "rate": "4%"
+        },
+        {
+          "category": "Restaurants",
+          "rate": "3%"
+        },
+        {
+          "category": "Eligible travel",
+          "rate": "3%"
+        },
+        {
+          "category": "Costco & all other",
+          "rate": "1%"
+        }
+      ],
+      "notes": "Reward certificate issued annually in February"
+    },
+    "signUpBonus": null,
+    "signUpSpendReq": null,
+    "perks": [
+      "No annual fee (with Costco membership)",
+      "4% gas",
+      "Executive member 2% reward stacks"
+    ],
+    "pros": [
+      "4% gas is top-tier",
+      "3% dining and travel",
+      "No card annual fee"
+    ],
+    "cons": [
+      "Requires Costco membership ($65-$130/yr)",
+      "Rewards paid annually not monthly",
+      "No SUB",
+      "Only 1% at Costco"
+    ],
+    "specialRequirements": "Requires active Costco membership",
+    "imageColor": "#E31837",
+    "active": false
+  },
+  {
+    "id": "discover-it-chrome",
+    "name": "Discover it® Chrome",
+    "issuer": "Discover",
+    "network": "Discover",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 15 months",
+    "ongoingAPR": "18.24% - 27.24%",
+    "creditScoreMin": 660,
+    "creditScoreIdeal": 690,
+    "estimatedIncomeReq": 20000,
+    "minCreditHistoryMonths": 6,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Gas stations & restaurants",
+          "rate": "2%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "Cashback Match first year doubles everything"
+    },
+    "signUpBonus": "Cashback Match first year",
+    "signUpSpendReq": null,
+    "perks": [
+      "No annual fee",
+      "0% intro APR",
+      "Cashback Match",
+      "Free FICO score"
+    ],
+    "pros": [
+      "Effectively 4% gas/dining first year",
+      "No annual fee",
+      "Easy approval"
+    ],
+    "cons": [
+      "Only 2% on two categories",
+      "Discover acceptance",
+      "Lower earning than competitors long-term"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#FF6B00"
+  },
+  {
+    "id": "amex-everyday",
+    "name": "Amex EveryDay® Credit Card",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 15 months",
+    "ongoingAPR": "18.24% - 29.24%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "U.S. supermarkets (up to $6K/yr)",
+          "rate": "2x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "20% bonus when you make 20+ purchases in a billing period"
+    },
+    "signUpBonus": "10,000 MR points after $2,000 spend in 6 months",
+    "signUpSpendReq": 2000,
+    "perks": [
+      "No annual fee",
+      "Earns Membership Rewards",
+      "0% intro APR",
+      "20+ purchase bonus"
+    ],
+    "pros": [
+      "Entry to Amex MR ecosystem",
+      "No annual fee",
+      "0% intro APR",
+      "Transfer partners via MR"
+    ],
+    "cons": [
+      "Low base earn rate",
+      "Must make 20+ purchases for bonus",
+      "2x grocery cap"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#006FCF"
+  },
+  {
+    "id": "amex-green",
+    "name": "American Express® Green Card",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "mid-tier",
+    "annualFee": 150,
+    "introAPR": null,
+    "ongoingAPR": "N/A (charge card)",
+    "creditScoreMin": 690,
+    "creditScoreIdeal": 720,
+    "estimatedIncomeReq": 40000,
+    "minCreditHistoryMonths": 18,
+    "typicalCreditLimit": null,
+    "rewards": {
+      "categories": [
+        {
+          "category": "Travel",
+          "rate": "3x"
+        },
+        {
+          "category": "Transit",
+          "rate": "3x"
+        },
+        {
+          "category": "Restaurants",
+          "rate": "3x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "Good mid-tier entry into Amex charge card lineup"
+    },
+    "signUpBonus": "40,000 MR points after $3,000 spend in 6 months",
+    "signUpSpendReq": 3000,
+    "perks": [
+      "$189 CLEAR® Plus credit",
+      "LoungeBuddy credit",
+      "No foreign transaction fees"
+    ],
+    "pros": [
+      "3x travel/transit/dining",
+      "CLEAR credit",
+      "Transfer to Amex partners",
+      "Charge card builds credit"
+    ],
+    "cons": [
+      "$150 annual fee",
+      "Must use CLEAR to offset",
+      "Amex Gold is often better value"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#006FCF"
+  },
+  {
+    "id": "chase-ink-preferred",
+    "name": "Chase Ink Business Preferred®",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "premium",
+    "annualFee": 95,
+    "introAPR": null,
+    "ongoingAPR": "21.24% - 26.24%",
+    "creditScoreMin": 710,
+    "creditScoreIdeal": 750,
+    "estimatedIncomeReq": 50000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 50000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Travel, shipping, internet, phone, advertising (first $150K/yr)",
+          "rate": "3x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "Business card. Points combine with personal Sapphire. Doesn't count toward 5/24 (but subject to it)."
+    },
+    "signUpBonus": "100,000 UR points after $8,000 spend in 3 months",
+    "signUpSpendReq": 8000,
+    "perks": [
+      "Cell phone protection",
+      "Trip cancellation insurance",
+      "Purchase protection",
+      "Points transfer to Sapphire"
+    ],
+    "pros": [
+      "100K SUB is massive",
+      "Points pool with Sapphire",
+      "Doesn't add to 5/24 count",
+      "3x on many biz expenses"
+    ],
+    "cons": [
+      "$8K spend requirement",
+      "Business card (need business income)",
+      "Subject to 5/24"
+    ],
+    "specialRequirements": "Requires business (sole proprietorship OK). Subject to Chase 5/24.",
+    "imageColor": "#1A4B8C"
+  },
+  {
+    "id": "chase-ink-unlimited",
+    "name": "Chase Ink Business Unlimited®",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 12 months",
+    "ongoingAPR": "18.49% - 24.49%",
+    "creditScoreMin": 690,
+    "creditScoreIdeal": 720,
+    "estimatedIncomeReq": 35000,
+    "minCreditHistoryMonths": 18,
+    "typicalCreditLimit": {
+      "min": 3000,
+      "max": 15000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "All business purchases",
+          "rate": "1.5%"
+        }
+      ],
+      "notes": "Points combine with Sapphire cards"
+    },
+    "signUpBonus": "$750 after $6,000 spend in 3 months",
+    "signUpSpendReq": 6000,
+    "perks": [
+      "No annual fee",
+      "0% intro APR",
+      "Points pool with Sapphire",
+      "Purchase protection"
+    ],
+    "pros": [
+      "No AF business card",
+      "Points combine with Sapphire",
+      "Good SUB",
+      "Doesn't count toward 5/24"
+    ],
+    "cons": [
+      "$6K SUB spend",
+      "Only 1.5% flat rate",
+      "Need business income"
+    ],
+    "specialRequirements": "Requires business (sole proprietorship OK). Subject to Chase 5/24.",
+    "imageColor": "#1A4B8C"
+  },
+  {
+    "id": "amex-business-gold",
+    "name": "Amex Business Gold Card",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "premium",
+    "annualFee": 375,
+    "introAPR": null,
+    "ongoingAPR": "19.49% - 27.49%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 740,
+    "estimatedIncomeReq": 60000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": null,
+    "rewards": {
+      "categories": [
+        {
+          "category": "Top 2 spending categories each month (from 6 eligible)",
+          "rate": "4x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "4x on top 2 categories up to $150K/yr: airfare, advertising, gas, shipping, computer hardware/software, restaurants"
+    },
+    "signUpBonus": "70,000 MR points after $10,000 spend in 3 months",
+    "signUpSpendReq": 10000,
+    "perks": [
+      "4x on top 2 categories",
+      "Flexible payment options",
+      "25% airline points back (up to 250K)",
+      "Transfer to MR partners"
+    ],
+    "pros": [
+      "4x on top business categories",
+      "High SUB",
+      "Flexible payments",
+      "MR transfer partners"
+    ],
+    "cons": [
+      "$375 annual fee",
+      "$10K SUB spend",
+      "4x cap at $150K",
+      "Complex category tracking"
+    ],
+    "specialRequirements": "Requires business",
+    "imageColor": "#B5985A"
+  },
+  {
+    "id": "amex-hilton-honors",
+    "name": "Hilton Honors American Express Card",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": null,
+    "ongoingAPR": "22.24% - 29.24%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Hilton purchases",
+          "rate": "7x"
+        },
+        {
+          "category": "Restaurants, supermarkets, gas",
+          "rate": "5x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "3x"
+        }
+      ],
+      "notes": "Hilton points worth ~0.5 cents each"
+    },
+    "signUpBonus": "70,000 Hilton Honors points after $2,000 spend in 6 months",
+    "signUpSpendReq": 2000,
+    "perks": [
+      "No annual fee",
+      "Hilton Silver status",
+      "5th night free on reward stays"
+    ],
+    "pros": [
+      "No annual fee",
+      "High earn rates",
+      "Good SUB",
+      "Silver status"
+    ],
+    "cons": [
+      "Hilton points worth less per point",
+      "No lounge access",
+      "Amex acceptance"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#006FCF",
+    "active": false
+  },
+  {
+    "id": "amex-hilton-surpass",
+    "name": "Hilton Honors American Express Surpass®",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "premium",
+    "annualFee": 150,
+    "introAPR": null,
+    "ongoingAPR": "22.24% - 29.24%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 730,
+    "estimatedIncomeReq": 40000,
+    "minCreditHistoryMonths": 18,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Hilton purchases",
+          "rate": "12x"
+        },
+        {
+          "category": "Restaurants, supermarkets, gas",
+          "rate": "6x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "3x"
+        }
+      ],
+      "notes": "Spend $15K to earn free night certificate"
+    },
+    "signUpBonus": "130,000 Hilton points after $3,000 spend in 6 months",
+    "signUpSpendReq": 3000,
+    "perks": [
+      "Hilton Gold status",
+      "Free night cert at $15K spend",
+      "Priority Pass (10 visits)",
+      "5th night free on reward stays"
+    ],
+    "pros": [
+      "Gold status automatically",
+      "Huge SUB",
+      "Priority Pass included",
+      "Free night certificate"
+    ],
+    "cons": [
+      "$150 annual fee",
+      "Hilton points devaluation risk",
+      "Must spend $15K for free night"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#006FCF",
+    "active": false
+  },
+  {
+    "id": "chase-marriott-bonvoy-bold",
+    "name": "Marriott Bonvoy Bold® Visa",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": null,
+    "ongoingAPR": "21.24% - 28.24%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Marriott purchases",
+          "rate": "14x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "Marriott points worth ~0.7 cents each"
+    },
+    "signUpBonus": "30,000 Marriott points after $1,500 spend in 3 months",
+    "signUpSpendReq": 1500,
+    "perks": [
+      "No annual fee",
+      "Marriott Silver Elite status",
+      "15% discount on in-room dining at Marriott"
+    ],
+    "pros": [
+      "No annual fee hotel card",
+      "14x at Marriott",
+      "Silver status",
+      "Easy SUB"
+    ],
+    "cons": [
+      "Only 1x outside Marriott",
+      "Silver status is basic",
+      "Chase 5/24"
+    ],
+    "specialRequirements": "Subject to Chase 5/24 rule",
+    "imageColor": "#1A4B8C",
+    "active": false
+  },
+  {
+    "id": "citi-strata-premier",
+    "name": "Citi Strata Premier℠",
+    "issuer": "Citi",
+    "network": "Mastercard",
+    "tier": "premium",
+    "annualFee": 95,
+    "introAPR": null,
+    "ongoingAPR": "21.24% - 29.24%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 740,
+    "estimatedIncomeReq": 50000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Air travel & hotels",
+          "rate": "10x"
+        },
+        {
+          "category": "Restaurants & supermarkets",
+          "rate": "3x"
+        },
+        {
+          "category": "Gas, EV charging, transit",
+          "rate": "3x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "10x on hotels and flights is among the highest for a $95 card"
+    },
+    "signUpBonus": "75,000 ThankYou points after $4,000 spend in 3 months",
+    "signUpSpendReq": 4000,
+    "perks": [
+      "$100 annual hotel savings benefit",
+      "No foreign transaction fees",
+      "Transfer to travel partners",
+      "Trip delay protection"
+    ],
+    "pros": [
+      "10x on travel is exceptional",
+      "Strong SUB",
+      "No foreign transaction fees",
+      "Transfer partners"
+    ],
+    "cons": [
+      "$95 annual fee",
+      "Only 1x on non-bonus spending",
+      "Citi's partner list is smaller"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#003B70"
+  },
+  {
+    "id": "bilt-rewards",
+    "name": "Bilt Mastercard®",
+    "issuer": "Wells Fargo",
+    "network": "Mastercard",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": null,
+    "ongoingAPR": "N/A (must pay in full or APR applies)",
+    "creditScoreMin": 680,
+    "creditScoreIdeal": 720,
+    "estimatedIncomeReq": 30000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Rent (up to 100K pts/yr on Bilt Rent Day)",
+          "rate": "1x"
+        },
+        {
+          "category": "Dining",
+          "rate": "3x"
+        },
+        {
+          "category": "Travel",
+          "rate": "2x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "Only card that earns points on rent. Must make 5 transactions/mo to earn points."
+    },
+    "signUpBonus": null,
+    "signUpSpendReq": null,
+    "perks": [
+      "No annual fee",
+      "Points on rent",
+      "Transfer to Hyatt, AA, United, and more",
+      "Bilt Rent Day bonus (1st of month)"
+    ],
+    "pros": [
+      "Only card earning points on rent",
+      "Premium transfer partners",
+      "No annual fee",
+      "Great for renters"
+    ],
+    "cons": [
+      "Must make 5 purchases/mo",
+      "No SUB",
+      "Complex earning structure",
+      "Rent Day optimization needed"
+    ],
+    "specialRequirements": "Must make minimum 5 transactions per statement to earn points",
+    "imageColor": "#000000"
+  },
+  {
+    "id": "citi-secured",
+    "name": "Citi® Secured Mastercard®",
+    "issuer": "Citi",
+    "network": "Mastercard",
+    "tier": "starter",
+    "annualFee": 0,
+    "introAPR": null,
+    "ongoingAPR": "25.24%",
+    "creditScoreMin": 300,
+    "creditScoreIdeal": 500,
+    "estimatedIncomeReq": null,
+    "minCreditHistoryMonths": 0,
+    "typicalCreditLimit": {
+      "min": 200,
+      "max": 2500
+    },
+    "rewards": {
+      "categories": [],
+      "notes": "No rewards program — focused on credit building"
+    },
+    "signUpBonus": null,
+    "signUpSpendReq": null,
+    "perks": [
+      "No annual fee",
+      "Free FICO score",
+      "Automatic review for upgrade",
+      "Citi Identity Theft Solutions"
+    ],
+    "pros": [
+      "No credit history needed",
+      "No annual fee",
+      "Path into Citi ecosystem",
+      "Mastercard acceptance worldwide"
+    ],
+    "cons": [
+      "No rewards",
+      "Requires $200-$2500 security deposit",
+      "High APR",
+      "Basic card"
+    ],
+    "specialRequirements": "Requires refundable security deposit ($200 minimum)",
+    "imageColor": "#003B70"
+  },
+  {
+    "id": "bofa-cash-secured",
+    "name": "Bank of America® Customized Cash Rewards Secured",
+    "issuer": "Bank of America",
+    "network": "Visa",
+    "tier": "starter",
+    "annualFee": 0,
+    "introAPR": null,
+    "ongoingAPR": "27.49%",
+    "creditScoreMin": 300,
+    "creditScoreIdeal": 500,
+    "estimatedIncomeReq": null,
+    "minCreditHistoryMonths": 0,
+    "typicalCreditLimit": {
+      "min": 200,
+      "max": 2500
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Choice category (gas, online shopping, dining, travel, drug stores, or home improvement)",
+          "rate": "3%"
+        },
+        {
+          "category": "Grocery stores & wholesale clubs",
+          "rate": "2%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "Choose your own 3% category each month"
+    },
+    "signUpBonus": "$200 after $1,000 spend in 90 days",
+    "signUpSpendReq": 1000,
+    "perks": [
+      "No annual fee",
+      "Customizable 3% category",
+      "Preferred Rewards boost",
+      "Automatic review for unsecured upgrade"
+    ],
+    "pros": [
+      "Earns rewards as a secured card",
+      "Customizable bonus category",
+      "Path to BofA ecosystem",
+      "No annual fee"
+    ],
+    "cons": [
+      "Requires $200-$2500 deposit",
+      "High APR",
+      "3% category has quarterly cap"
+    ],
+    "specialRequirements": "Requires refundable security deposit ($200 minimum)",
+    "imageColor": "#012169"
+  },
+  {
+    "id": "wells-fargo-reflect",
+    "name": "Wells Fargo Reflect® Card",
+    "issuer": "Wells Fargo",
+    "network": "Visa",
+    "tier": "starter",
+    "annualFee": 0,
+    "introAPR": "0% for 21 months",
+    "ongoingAPR": "18.24% - 29.99%",
+    "creditScoreMin": 630,
+    "creditScoreIdeal": 670,
+    "estimatedIncomeReq": null,
+    "minCreditHistoryMonths": 0,
+    "typicalCreditLimit": {
+      "min": 500,
+      "max": 5000
+    },
+    "rewards": {
+      "categories": [],
+      "notes": "No rewards program — designed for balance transfers and 0% APR"
+    },
+    "signUpBonus": null,
+    "signUpSpendReq": null,
+    "perks": [
+      "No annual fee",
+      "Up to 21-month 0% intro APR",
+      "Cell phone protection",
+      "Zero Liability protection"
+    ],
+    "pros": [
+      "Industry-leading 0% intro APR",
+      "No annual fee",
+      "Cell phone protection",
+      "Entry to Wells Fargo ecosystem"
+    ],
+    "cons": [
+      "No rewards",
+      "3% foreign transaction fee",
+      "Limited perks beyond 0% APR"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#CD1409"
+  },
+  {
+    "id": "capital-one-savor",
+    "name": "Capital One Savor Cash Rewards",
+    "issuer": "Capital One",
+    "network": "Mastercard",
+    "tier": "premium",
+    "annualFee": 95,
+    "introAPR": null,
+    "ongoingAPR": "19.99% - 29.99%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 750,
+    "estimatedIncomeReq": 50000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Dining & entertainment",
+          "rate": "4%"
+        },
+        {
+          "category": "Streaming services",
+          "rate": "4%"
+        },
+        {
+          "category": "Grocery stores",
+          "rate": "3%"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1%"
+        }
+      ],
+      "notes": "One of the best dining/entertainment reward rates"
+    },
+    "signUpBonus": "$300 after $3,000 spend in 3 months",
+    "signUpSpendReq": 3000,
+    "perks": [
+      "No foreign transaction fees",
+      "Complimentary Uber One membership",
+      "Capital One Entertainment access",
+      "Extended warranty protection"
+    ],
+    "pros": [
+      "Top dining/entertainment rewards",
+      "Streaming cashback",
+      "No foreign transaction fees",
+      "Uber One included"
+    ],
+    "cons": [
+      "$95 annual fee",
+      "Need strong credit",
+      "Not ideal for travel rewards"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#004977"
+  },
+  {
+    "id": "delta-skymiles-blue",
+    "name": "Delta SkyMiles® Blue Amex Card",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "mid-tier",
+    "annualFee": 0,
+    "introAPR": "0% for 15 months",
+    "ongoingAPR": "20.99% - 29.99%",
+    "creditScoreMin": 670,
+    "creditScoreIdeal": 700,
+    "estimatedIncomeReq": 25000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Delta purchases",
+          "rate": "2x miles"
+        },
+        {
+          "category": "Restaurants worldwide",
+          "rate": "2x miles"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x mile"
+        }
+      ],
+      "notes": "Entry-level Delta card with no annual fee"
+    },
+    "signUpBonus": "10,000 bonus miles after $1,000 spend in 6 months",
+    "signUpSpendReq": 1000,
+    "perks": [
+      "No annual fee",
+      "No foreign transaction fees",
+      "Free first checked bag on Delta",
+      "Main Cabin 1 boarding"
+    ],
+    "pros": [
+      "No annual fee airline card",
+      "Free checked bag saves $60/flight",
+      "Good entry to Delta/Amex ecosystem",
+      "Dining bonus"
+    ],
+    "cons": [
+      "Low sign-up bonus",
+      "No lounge access",
+      "Limited premium benefits"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#003A70",
+    "active": false
+  },
+  {
+    "id": "delta-skymiles-gold",
+    "name": "Delta SkyMiles® Gold Amex Card",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "premium",
+    "annualFee": 150,
+    "introAPR": null,
+    "ongoingAPR": "20.99% - 29.99%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 750,
+    "estimatedIncomeReq": 50000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Delta purchases",
+          "rate": "2x miles"
+        },
+        {
+          "category": "Restaurants worldwide",
+          "rate": "2x miles"
+        },
+        {
+          "category": "U.S. supermarkets",
+          "rate": "2x miles"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x mile"
+        }
+      ],
+      "notes": "Mid-tier Delta card with solid travel perks"
+    },
+    "signUpBonus": "40,000 bonus miles after $2,000 spend in 6 months",
+    "signUpSpendReq": 2000,
+    "perks": [
+      "Free first checked bag on Delta",
+      "Priority boarding",
+      "$100 Delta flight credit",
+      "No foreign transaction fees",
+      "20% savings on in-flight purchases"
+    ],
+    "pros": [
+      "Strong sign-up bonus",
+      "Priority boarding",
+      "$100 Delta credit offsets fee",
+      "Solid earning on dining & groceries"
+    ],
+    "cons": [
+      "$150 annual fee",
+      "No lounge access",
+      "Best value only for Delta loyalists"
+    ],
+    "specialRequirements": "Subject to Amex 1/5 rule (1 card of same product per 5 years)",
+    "imageColor": "#86721C",
+    "active": false
+  },
+  {
+    "id": "usbank-altitude-connect",
+    "name": "U.S. Bank Altitude® Connect Visa",
+    "issuer": "U.S. Bank",
+    "network": "Visa",
+    "tier": "premium",
+    "annualFee": 95,
+    "introAPR": "0% for 12 months",
+    "ongoingAPR": "19.74% - 28.74%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 750,
+    "estimatedIncomeReq": 50000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Travel & gas stations",
+          "rate": "4x"
+        },
+        {
+          "category": "Streaming, dining & grocery delivery",
+          "rate": "2x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "Strong travel & gas earning with $30 annual streaming credit"
+    },
+    "signUpBonus": "50,000 points after $2,000 spend in 120 days",
+    "signUpSpendReq": 2000,
+    "perks": [
+      "$30 annual streaming credit",
+      "Annual companion certificate",
+      "Two complimentary airport lounge visits/year",
+      "No foreign transaction fees",
+      "Trip cancellation insurance"
+    ],
+    "pros": [
+      "High travel & gas earn rate",
+      "Streaming credit offsets fee",
+      "Companion airfare certificate",
+      "Good SUB"
+    ],
+    "cons": [
+      "$95 annual fee",
+      "U.S. Bank relationship may be required",
+      "Limited transfer partners"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#D71E28"
+  },
+  {
+    "id": "wells-fargo-autograph-journey",
+    "name": "Wells Fargo Autograph Journey℠ Card",
+    "issuer": "Wells Fargo",
+    "network": "Visa",
+    "tier": "premium",
+    "annualFee": 95,
+    "introAPR": null,
+    "ongoingAPR": "20.24% - 29.99%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 750,
+    "estimatedIncomeReq": 50000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Hotels",
+          "rate": "5x"
+        },
+        {
+          "category": "Airlines",
+          "rate": "4x"
+        },
+        {
+          "category": "Car rentals",
+          "rate": "3x"
+        },
+        {
+          "category": "Dining",
+          "rate": "3x"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x"
+        }
+      ],
+      "notes": "Premium Wells Fargo travel card with transfer partners"
+    },
+    "signUpBonus": "60,000 bonus points after $4,000 spend in 3 months",
+    "signUpSpendReq": 4000,
+    "perks": [
+      "$50 airline credit",
+      "Cell phone protection",
+      "Travel accident insurance",
+      "Points transfer to airline/hotel partners",
+      "No foreign transaction fees"
+    ],
+    "pros": [
+      "High hotel & airline earning",
+      "Transfer partners add flexibility",
+      "Strong SUB",
+      "Well-rounded travel card"
+    ],
+    "cons": [
+      "$95 annual fee",
+      "No lounge access",
+      "Newer card with limited track record"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#CD1409"
+  },
+  {
+    "id": "citi-aadvantage-executive",
+    "name": "Citi® / AAdvantage® Executive World Elite Mastercard®",
+    "issuer": "Citi",
+    "network": "Mastercard",
+    "tier": "ultra-premium",
+    "annualFee": 595,
+    "introAPR": null,
+    "ongoingAPR": "21.24% - 29.99%",
+    "creditScoreMin": 740,
+    "creditScoreIdeal": 780,
+    "estimatedIncomeReq": 80000,
+    "minCreditHistoryMonths": 36,
+    "typicalCreditLimit": {
+      "min": 10000,
+      "max": 50000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "American Airlines purchases",
+          "rate": "4x miles"
+        },
+        {
+          "category": "Dining, gas, telecom",
+          "rate": "2x miles"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x mile"
+        }
+      ],
+      "notes": "Top-tier AA card with Admirals Club access"
+    },
+    "signUpBonus": "70,000 bonus miles after $7,000 spend in 4 months",
+    "signUpSpendReq": 7000,
+    "perks": [
+      "Admirals Club membership (primary + authorized users)",
+      "Global Entry/TSA PreCheck credit",
+      "Free checked bags on AA",
+      "Priority boarding",
+      "25% savings on AA in-flight purchases",
+      "Trip delay & baggage insurance"
+    ],
+    "pros": [
+      "Admirals Club lounge for cardholder + guests",
+      "Strong AA loyalty earning",
+      "Premium travel protections",
+      "Good SUB"
+    ],
+    "cons": [
+      "$595 annual fee",
+      "Best value only for heavy AA flyers",
+      "High income/score requirements"
+    ],
+    "specialRequirements": null,
+    "imageColor": "#0078D2"
+  },
+  {
+    "id": "chase-united-explorer",
+    "name": "United℠ Explorer Card",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "premium",
+    "annualFee": 95,
+    "introAPR": null,
+    "ongoingAPR": "21.99% - 28.99%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 750,
+    "estimatedIncomeReq": 50000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "United purchases",
+          "rate": "2x miles"
+        },
+        {
+          "category": "Dining",
+          "rate": "2x miles"
+        },
+        {
+          "category": "Hotel stays booked directly",
+          "rate": "2x miles"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x mile"
+        }
+      ],
+      "notes": "Core United Airlines co-brand card with solid travel perks"
+    },
+    "signUpBonus": "60,000 bonus miles after $3,000 spend in 3 months",
+    "signUpSpendReq": 3000,
+    "perks": [
+      "Free first and second checked bags on United",
+      "United Club passes (2/year)",
+      "Priority boarding",
+      "Global Entry/TSA PreCheck credit",
+      "Primary rental car insurance",
+      "Trip delay & baggage insurance"
+    ],
+    "pros": [
+      "Free checked bags save $70+/flight",
+      "Strong SUB",
+      "TSA PreCheck/Global Entry credit",
+      "Good United earning"
+    ],
+    "cons": [
+      "$95 annual fee",
+      "Best value for United loyalists",
+      "Subject to Chase 5/24"
+    ],
+    "specialRequirements": "Subject to Chase 5/24 rule",
+    "imageColor": "#002244",
+    "active": false
+  },
+  {
+    "id": "world-of-hyatt",
+    "name": "World of Hyatt Credit Card",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 95,
+    "introAPR": null,
+    "ongoingAPR": "21.49% - 28.49%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 750,
+    "estimatedIncomeReq": 40000,
+    "minCreditHistoryMonths": 18,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Hyatt purchases",
+          "rate": "4x points"
+        },
+        {
+          "category": "Dining",
+          "rate": "2x points"
+        },
+        {
+          "category": "Airline tickets (purchased from airline)",
+          "rate": "2x points"
+        },
+        {
+          "category": "Local transit & commuting",
+          "rate": "2x points"
+        },
+        {
+          "category": "Gym & fitness memberships",
+          "rate": "2x points"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x point"
+        }
+      ],
+      "notes": "Best return-per-point among hotel cards (~2 cents/point at Hyatt)"
+    },
+    "signUpBonus": "30,000 bonus points after $3,000 spend in 3 months",
+    "signUpSpendReq": 3000,
+    "perks": [
+      "Automatic Discoverist status",
+      "1 free night annually (up to Cat 4)",
+      "Earn 2 qualifying night credits per $5,000 spend",
+      "5 qualifying nights toward status annually",
+      "No foreign transaction fees"
+    ],
+    "pros": [
+      "Industry-best point value at Hyatt",
+      "Free annual night",
+      "Path to Globalist status",
+      "Broad bonus categories"
+    ],
+    "cons": [
+      "$95 annual fee",
+      "Hyatt has fewer locations than Marriott/Hilton",
+      "Subject to Chase 5/24"
+    ],
+    "specialRequirements": "Subject to Chase 5/24 rule",
+    "imageColor": "#84754E",
+    "active": false
+  },
+  {
+    "id": "marriott-bonvoy-boundless",
+    "name": "Marriott Bonvoy Boundless® Credit Card",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 95,
+    "introAPR": null,
+    "ongoingAPR": "21.49% - 28.49%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 740,
+    "estimatedIncomeReq": 35000,
+    "minCreditHistoryMonths": 18,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Marriott Bonvoy purchases",
+          "rate": "6x points"
+        },
+        {
+          "category": "Grocery stores",
+          "rate": "3x points"
+        },
+        {
+          "category": "Gas stations",
+          "rate": "3x points"
+        },
+        {
+          "category": "Dining",
+          "rate": "3x points"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "2x points"
+        }
+      ],
+      "notes": "Core Marriott card with strong everyday earning"
+    },
+    "signUpBonus": "3 free night awards (each up to 50,000 points) after $3,000 spend in 3 months",
+    "signUpSpendReq": 3000,
+    "perks": [
+      "Automatic Silver Elite status",
+      "1 free night annually (up to 35,000 points)",
+      "15 elite qualifying nights annually",
+      "No foreign transaction fees"
+    ],
+    "pros": [
+      "Excellent SUB (3 free nights)",
+      "Strong everyday earning",
+      "Free annual night",
+      "Huge Marriott portfolio"
+    ],
+    "cons": [
+      "$95 annual fee",
+      "Marriott points less valuable per point",
+      "Subject to Chase 5/24"
+    ],
+    "specialRequirements": "Subject to Chase 5/24 rule",
+    "imageColor": "#8A1538",
+    "active": false
+  },
+  {
+    "id": "marriott-bonvoy-brilliant",
+    "name": "Marriott Bonvoy Brilliant® Amex Card",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "ultra-premium",
+    "annualFee": 650,
+    "introAPR": null,
+    "ongoingAPR": "21.49% - 29.49%",
+    "creditScoreMin": 740,
+    "creditScoreIdeal": 780,
+    "estimatedIncomeReq": 80000,
+    "minCreditHistoryMonths": 36,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 50000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Marriott Bonvoy purchases",
+          "rate": "6x points"
+        },
+        {
+          "category": "Restaurants worldwide",
+          "rate": "3x points"
+        },
+        {
+          "category": "Flights booked directly with airlines",
+          "rate": "3x points"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "2x points"
+        }
+      ],
+      "notes": "Top Marriott card with Platinum Elite and premium credits"
+    },
+    "signUpBonus": "200,000 bonus points after $6,000 spend in 6 months",
+    "signUpSpendReq": 6000,
+    "perks": [
+      "Automatic Platinum Elite status",
+      "Free night annually (up to 85,000 points)",
+      "$300 Marriott statement credit",
+      "Priority Pass Select lounge access",
+      "$100 property credit on stays 2+ nights",
+      "Global Entry/TSA PreCheck credit"
+    ],
+    "pros": [
+      "Platinum Elite status",
+      "85K free night award",
+      "$300 Marriott credit offsets fee",
+      "Lounge access"
+    ],
+    "cons": [
+      "$650 annual fee",
+      "Best for Marriott-loyal travelers",
+      "Amex acceptance limitations"
+    ],
+    "specialRequirements": "Subject to Amex 1/5 rule",
+    "imageColor": "#8A1538",
+    "active": false
+  },
+  {
+    "id": "hilton-aspire",
+    "name": "Hilton Honors American Express Aspire Card",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "ultra-premium",
+    "annualFee": 550,
+    "introAPR": null,
+    "ongoingAPR": "22.49% - 29.49%",
+    "creditScoreMin": 740,
+    "creditScoreIdeal": 780,
+    "estimatedIncomeReq": 80000,
+    "minCreditHistoryMonths": 36,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Hilton purchases",
+          "rate": "14x points"
+        },
+        {
+          "category": "Dining",
+          "rate": "7x points"
+        },
+        {
+          "category": "Flights booked directly with airlines",
+          "rate": "7x points"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "3x points"
+        }
+      ],
+      "notes": "The best hotel credit card — automatic Diamond status"
+    },
+    "signUpBonus": "175,000 bonus points after $6,000 spend in 6 months",
+    "signUpSpendReq": 6000,
+    "perks": [
+      "Automatic Diamond status",
+      "Free weekend night annually",
+      "$400 Hilton resort credit",
+      "Priority Pass Select lounge access",
+      "$200 airline fee credit",
+      "$200 Hilton Experiences credit",
+      "Global Entry/TSA PreCheck credit"
+    ],
+    "pros": [
+      "Diamond status (best Hilton tier)",
+      "Massive earning rates",
+      "Multiple statement credits offset fee",
+      "Lounge access"
+    ],
+    "cons": [
+      "$550 annual fee",
+      "Hilton points worth less per point",
+      "Best value for frequent Hilton guests"
+    ],
+    "specialRequirements": "Subject to Amex 1/5 rule",
+    "imageColor": "#104C97",
+    "active": false
+  },
+  {
+    "id": "ihg-one-rewards-premier",
+    "name": "IHG One Rewards Premier Credit Card",
+    "issuer": "Chase",
+    "network": "Mastercard",
+    "tier": "mid-tier",
+    "annualFee": 99,
+    "introAPR": null,
+    "ongoingAPR": "21.49% - 28.49%",
+    "creditScoreMin": 680,
+    "creditScoreIdeal": 720,
+    "estimatedIncomeReq": 30000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "IHG purchases",
+          "rate": "10x points"
+        },
+        {
+          "category": "Dining & gas",
+          "rate": "2x points"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x point"
+        }
+      ],
+      "notes": "Core IHG card with Platinum Elite and anniversary night"
+    },
+    "signUpBonus": "140,000 bonus points after $3,000 spend in 3 months",
+    "signUpSpendReq": 3000,
+    "perks": [
+      "Automatic Platinum Elite status",
+      "Anniversary night (up to 40,000 points)",
+      "$100 credit + 10,000 points at $20K spend",
+      "Global Entry/TSA PreCheck credit",
+      "4th night free on reward stays"
+    ],
+    "pros": [
+      "Strong SUB",
+      "Platinum Elite status",
+      "Good anniversary night",
+      "4th night free benefit"
+    ],
+    "cons": [
+      "$99 annual fee",
+      "Lower earning outside IHG",
+      "IHG points less valuable per point"
+    ],
+    "specialRequirements": "Subject to Chase 5/24 rule",
+    "imageColor": "#3B7D23",
+    "active": false
+  },
+  {
+    "id": "southwest-rapid-rewards-plus",
+    "name": "Southwest Rapid Rewards® Plus Credit Card",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "mid-tier",
+    "annualFee": 99,
+    "introAPR": null,
+    "ongoingAPR": "21.49% - 28.49%",
+    "creditScoreMin": 680,
+    "creditScoreIdeal": 720,
+    "estimatedIncomeReq": 30000,
+    "minCreditHistoryMonths": 12,
+    "typicalCreditLimit": {
+      "min": 1000,
+      "max": 10000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Southwest purchases",
+          "rate": "2x points"
+        },
+        {
+          "category": "Rapid Rewards hotel & car partners",
+          "rate": "2x points"
+        },
+        {
+          "category": "Local transit & commuting",
+          "rate": "2x points"
+        },
+        {
+          "category": "Internet, cable, phone services",
+          "rate": "2x points"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x point"
+        }
+      ],
+      "notes": "Entry Southwest card — path toward Companion Pass"
+    },
+    "signUpBonus": "50,000 points after $1,000 spend in 3 months",
+    "signUpSpendReq": 1000,
+    "perks": [
+      "3,000 anniversary points",
+      "25% back on in-flight purchases",
+      "2 EarlyBird Check-In per year",
+      "No foreign transaction fees",
+      "Earn points toward Companion Pass"
+    ],
+    "pros": [
+      "Low spend requirement for SUB",
+      "Companion Pass eligible",
+      "No bag fees on Southwest",
+      "Good everyday categories"
+    ],
+    "cons": [
+      "$99 annual fee",
+      "Only useful for Southwest flyers",
+      "Lower base earning than Priority"
+    ],
+    "specialRequirements": "Subject to Chase 5/24 rule",
+    "imageColor": "#304CB2",
+    "active": false
+  },
+  {
+    "id": "southwest-rapid-rewards-priority",
+    "name": "Southwest Rapid Rewards® Priority Credit Card",
+    "issuer": "Chase",
+    "network": "Visa",
+    "tier": "premium",
+    "annualFee": 149,
+    "introAPR": null,
+    "ongoingAPR": "21.49% - 28.49%",
+    "creditScoreMin": 700,
+    "creditScoreIdeal": 740,
+    "estimatedIncomeReq": 40000,
+    "minCreditHistoryMonths": 18,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Southwest purchases",
+          "rate": "3x points"
+        },
+        {
+          "category": "Rapid Rewards hotel & car partners",
+          "rate": "2x points"
+        },
+        {
+          "category": "Local transit & commuting",
+          "rate": "2x points"
+        },
+        {
+          "category": "Internet, cable, phone services",
+          "rate": "2x points"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x point"
+        }
+      ],
+      "notes": "Premium Southwest card with $75 annual travel credit"
+    },
+    "signUpBonus": "50,000 points after $1,000 spend in 3 months",
+    "signUpSpendReq": 1000,
+    "perks": [
+      "$75 annual Southwest travel credit",
+      "7,500 anniversary points",
+      "4 upgraded boardings per year",
+      "25% back on in-flight purchases",
+      "No foreign transaction fees",
+      "Earn points toward Companion Pass"
+    ],
+    "pros": [
+      "$75 credit effectively reduces AF to $74",
+      "7,500 anniversary points",
+      "Upgraded boarding perks",
+      "Companion Pass eligible"
+    ],
+    "cons": [
+      "$149 annual fee",
+      "Only valuable for Southwest flyers",
+      "No lounge access"
+    ],
+    "specialRequirements": "Subject to Chase 5/24 rule",
+    "imageColor": "#304CB2",
+    "active": false
+  },
+  {
+    "id": "delta-skymiles-platinum",
+    "name": "Delta SkyMiles® Platinum Amex Card",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "premium",
+    "annualFee": 350,
+    "introAPR": null,
+    "ongoingAPR": "21.49% - 29.49%",
+    "creditScoreMin": 720,
+    "creditScoreIdeal": 760,
+    "estimatedIncomeReq": 60000,
+    "minCreditHistoryMonths": 24,
+    "typicalCreditLimit": {
+      "min": 5000,
+      "max": 25000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Delta purchases",
+          "rate": "3x miles"
+        },
+        {
+          "category": "Restaurants worldwide",
+          "rate": "2x miles"
+        },
+        {
+          "category": "U.S. supermarkets",
+          "rate": "2x miles"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x mile"
+        }
+      ],
+      "notes": "Premium Delta card with Companion Certificate and Sky Priority"
+    },
+    "signUpBonus": "90,000 bonus miles and 10,000 MQMs after $4,000 spend in 6 months",
+    "signUpSpendReq": 4000,
+    "perks": [
+      "Domestic First Class Companion Certificate annually",
+      "Free first checked bag",
+      "Sky Priority boarding",
+      "Global Entry/TSA PreCheck credit",
+      "No foreign transaction fees",
+      "Earn Medallion Qualification Miles (MQMs) via spend"
+    ],
+    "pros": [
+      "Companion Certificate is very valuable",
+      "MQM earning for elite status",
+      "Sky Priority at airport",
+      "Strong SUB with MQMs"
+    ],
+    "cons": [
+      "$350 annual fee",
+      "No lounge access",
+      "Best value for Delta-loyal travelers"
+    ],
+    "specialRequirements": "Subject to Amex 1/5 rule",
+    "imageColor": "#6A1B9A",
+    "active": false
+  },
+  {
+    "id": "delta-skymiles-reserve",
+    "name": "Delta SkyMiles® Reserve Amex Card",
+    "issuer": "American Express",
+    "network": "Amex",
+    "tier": "ultra-premium",
+    "annualFee": 650,
+    "introAPR": null,
+    "ongoingAPR": "21.49% - 29.49%",
+    "creditScoreMin": 740,
+    "creditScoreIdeal": 780,
+    "estimatedIncomeReq": 80000,
+    "minCreditHistoryMonths": 36,
+    "typicalCreditLimit": {
+      "min": 10000,
+      "max": 50000
+    },
+    "rewards": {
+      "categories": [
+        {
+          "category": "Delta purchases",
+          "rate": "3x miles"
+        },
+        {
+          "category": "All other purchases",
+          "rate": "1x mile"
+        }
+      ],
+      "notes": "Top Delta card — only co-brand with Sky Club lounge access"
+    },
+    "signUpBonus": "90,000 bonus miles and 20,000 MQMs after $5,000 spend in 6 months",
+    "signUpSpendReq": 5000,
+    "perks": [
+      "Delta Sky Club access",
+      "Companion Certificate (domestic First or Comfort+)",
+      "Free checked bags for cardholder + 8 companions",
+      "Sky Priority",
+      "Global Entry/TSA PreCheck credit",
+      "No foreign transaction fees",
+      "CLEAR Plus credit"
+    ],
+    "pros": [
+      "Sky Club lounge access",
+      "Companion Certificate",
+      "Free bags for 9 people",
+      "MQM earning for status"
+    ],
+    "cons": [
+      "$650 annual fee",
+      "Narrow earning structure (1x non-Delta)",
+      "Only for dedicated Delta flyers"
+    ],
+    "specialRequirements": "Subject to Amex 1/5 rule",
+    "imageColor": "#1B0040",
+    "active": false
+  }
+]

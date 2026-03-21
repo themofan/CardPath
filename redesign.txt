@@ -1,0 +1,384 @@
+CardPath — Frontend & UI Agent Implementation Plan
+
+Part 0: Design system and color theme
+Primary colors (applied globally via Tailwind config and CSS variables):
+RoleHexUsagePrimary#0e6602Buttons, progress bars, active states, links, slider fills, badges, sidebar active highlightSecondary#483C32Sidebar background, card borders, text headings, dark accentsBackground#FFFFFFPage backgrounds, card backgrounds, input fieldsText primary#483C32Body text, headingsText secondary#7A7067Muted text, helper text, descriptions (a lighter shade derived from #483C32)Surface#F5F3F0Light taupe surface for quiz step backgrounds, card hover states, summary cardsSuccess/ready#0e6602Readiness meters at 80%+, "qualified" indicatorsWarning#D4A017Readiness meters at 50-79%, "almost there" indicatorsDanger#B91C1CReadiness below 50%, "not yet" indicatorsAccent light#E8F5E3Light green tint for selected cards, active quiz options, path node backgrounds when qualified
+Typography:
+
+Headings: Inter or system sans-serif, weight 600-700, color #483C32
+Body: Inter or system sans-serif, weight 400, color #483C32
+Muted/helper: weight 400, color #7A7067
+Numbers/scores: weight 700, color #0e6602 for positive values
+
+These colors replace all the default shadcn theme colors. Every component below uses this palette. The green progress bars, green "Next" buttons, green slider fills, and green active sidebar states you see in your screenshots — all are #0e6602. The dark sidebar text and card headings are #483C32.
+
+Part 1: Component integration plan
+You've provided four component specs to integrate. Here's exactly how each one maps to CardPath:
+Component 1: Financial score cards → Readiness meters
+Source: financial-score-cards.tsx with liquid-glass-card and liquid-glass-button dependencies
+How it maps to CardPath: The half-circle gauge + animated score display becomes the card readiness meter used throughout the app. Instead of "Protection Score / Investment Score / Financial Fitness", our three cards on the dashboard become:
+
+Card 1: Credit readiness score (overall qualification percentage across all recommended cards)
+Card 2: Rewards potential (estimated annual rewards based on spending profile)
+Card 3: Path progress (how far along they are on their recommended card journey)
+
+Modifications needed:
+
+Replace the data array with CardPath-specific titles and descriptions
+Change the Strength enum colors to match theme: Strong = #0e6602, Moderate = #D4A017, Weak = #B91C1C, None = #7A7067
+Replace the strengthColors gradient stops in FinancialScoreHalfCircle with:
+
+strong: ["hsl(130, 96%, 30%)", "hsl(130, 96%, 20%)", "hsl(130, 96%, 10%)"] (greens derived from #0e6602)
+moderate: ["hsl(43, 78%, 60%)", "hsl(43, 78%, 45%)", "hsl(43, 78%, 30%)"] (golds)
+weak: ["hsl(0, 72%, 60%)", "hsl(0, 72%, 45%)", "hsl(0, 72%, 30%)"] (reds)
+none: ["hsl(30, 10%, 55%)", "hsl(30, 10%, 40%)"] (taupe grays from #483C32)
+
+
+Wire the score prop to the actual user readiness percentage from eligibilityChecker.js
+The "Calculate your score" button becomes "Start quiz" if no profile exists, or "Update profile" if one does
+The "Learn more" button becomes "See recommended cards"
+
+File locations:
+
+/components/ui/financial-score-cards.tsx — the main component
+/components/ui/liquid-glass-card.tsx — card wrapper dependency
+/components/ui/liquid-glass-button.tsx — button dependency
+/components/ui/badge.tsx — badge dependency
+
+Where used: Dashboard page (Row 2, replacing the three stat cards from the previous plan). Also used on Card Detail pages for individual card readiness display.
+
+Component 2: Dashboard with collapsible sidebar → App shell
+Source: dashboard-with-collapsible-sidebar.tsx
+How it maps to CardPath: This becomes the entire app layout shell. The sidebar navigation and main content area structure are exactly what we need.
+Modifications needed:
+Sidebar navigation items (replacing the template ones):
+
+Dashboard — icon: LayoutDashboard (from lucide-react, matching your screenshot which shows a grid icon)
+Card Explorer — icon: CreditCard (matching the card icon in your screenshot)
+Path Graph — icon: GitBranch or Route (matching the branching path icon in your screenshot)
+Spending Analysis — icon: BarChart3 (matching the chart icon in your screenshot)
+Spending Simulator — icon: Zap (matching the lightning bolt icon in your screenshot)
+AI Advisor — icon: MessageSquare (matching the chat icon in your screenshot)
+Settings — icon: Settings (matching the gear icon in your screenshot)
+
+Sidebar styling changes:
+
+Background when expanded: #483C32 (dark taupe) — matching your screenshot's dark sidebar
+Text color: #FFFFFF for nav items
+Active item: background #0e6602 with #FFFFFF text and a left border accent, or a lighter green tint behind the item (matching the green highlight in your path graph screenshot)
+Hover: slightly lighter shade of #483C32 (e.g., #5A4E42)
+Logo section: Replace "TomIsLoading" with "CardPath" and "Pro Plan" with "Credit Card Advisor"
+Logo icon: Replace the SVG with a trending-up chart icon on a #0e6602 background circle (matching your screenshot)
+User avatar at bottom: Show "CP" initials in a green circle (matching your screenshot)
+
+Header changes:
+
+Remove the Moon/Sun toggle (or keep it if you want dark mode support)
+Keep the notification bell
+Change "Dashboard" title to be dynamic based on current page
+The stats grid, activity feed, and quick stats from the template get replaced with CardPath-specific dashboard content
+
+Content area:
+
+Replace ExampleContent with a <RouterOutlet /> or conditional rendering based on the selected sidebar item
+Each page (Dashboard, Card Explorer, Path Graph, etc.) renders in this content area
+
+File location: /components/ui/dashboard-with-collapsible-sidebar.tsx — then refactored into:
+
+/components/layout/Sidebar.tsx
+/components/layout/AppShell.tsx
+/components/layout/TopBar.tsx
+
+
+Component 3: Previous/next button group → Quiz navigation
+Source: previous-next-button-group.tsx with button-group.tsx and button.tsx dependencies
+How it maps to CardPath: This becomes the Back / Next navigation at the bottom of every quiz step. Your screenshots already show this exact pattern — a "Back" button on the left and a green "Next >" button on the right.
+Modifications needed:
+
+"Previous" button: Outlined variant, color #483C32 border and text, with ArrowLeft icon
+"Next" button: Filled variant, background #0e6602, white text, with ArrowRight icon
+On the final quiz step (Step 6), "Next" becomes "Finish" with #0e6602 background
+On Step 1, the "Back" button is hidden (no previous step)
+Button width: Not full-width, aligned to the edges of the content area (left-aligned Back, right-aligned Next) — matching your screenshots exactly
+
+File locations:
+
+/components/ui/previous-next-button-group.tsx
+/components/ui/button-group.tsx
+/components/ui/button.tsx (shadcn standard)
+
+Where used: Bottom of every quiz step page (Steps 1-6)
+
+Component 4: Slider → Income slider, spending sliders, credit score slider
+Source: slider.tsx using @radix-ui/react-slider
+How it maps to CardPath: This becomes every slider in the app:
+
+Annual income slider (Step 1 of quiz) — range $0 to $200,000+, step $1,000
+Credit score slider (Step 2 of quiz) — range 300 to 850, with color-coded zones
+Spending category sliders (Step 3B of quiz) — eight sliders, each $0 to $2,000
+Spending simulator sliders (Simulator page) — same eight categories, interactive
+
+Modifications needed:
+
+SliderPrimitive.Range className: change bg-primary to use #0e6602 explicitly or ensure the Tailwind primary color is set to #0e6602
+SliderPrimitive.Thumb className: change border-primary to #0e6602, thumb background stays white
+SliderPrimitive.Track background: use a dark gray/taupe (#D5D0CB derived from #483C32 at low opacity) instead of default bg-secondary
+For the credit score slider specifically: the track needs a multi-color gradient background (red → orange → yellow → light green → green) matching the zones shown in your screenshot. This requires a custom variant of the slider with a gradient track instead of solid color.
+
+Credit score slider custom variant:
+tsx// The track background becomes a gradient:
+// 300-579: red zone
+// 580-669: orange zone  
+// 670-739: yellow/gold zone
+// 740-799: light green zone
+// 800-850: dark green zone
+```
+
+The score value displays above the slider in large green text (e.g., "680") with a label ("Good") next to it — exactly as shown in your Step 2 screenshot. Below the slider, zone labels are positioned: "300 Poor", "580 Fair", "670 Good", "740 V.Good", "800 Exc." — matching your screenshot exactly.
+
+**File location:** `/components/ui/slider.tsx`
+
+**Where used:** Quiz Steps 1, 2, 3B; Spending Simulator page; Settings page (inline edits)
+
+---
+
+## Part 2: Page-by-page implementation with exact component mapping
+
+### Page 1: Quiz — Step 1 (Tell us about yourself)
+
+**Matching screenshot:** Your uploaded image showing "Tell us about yourself" with age, income slider, employment grid, housing cost.
+
+**Components used:**
+- `AppShell` — but sidebar is **hidden** during quiz (full-screen quiz experience)
+- `Slider` — for annual income ($0-$200K), with the green fill and large green number display above it ("$45,000")
+- Standard `<input>` — for Age (number input, value "25")
+- Custom radio grid — for Employment Status: 5 options in a 2x2+1 grid. Selected option gets `#0e6602` border and light green `#E8F5E3` background. Unselected gets `#483C32` border with white background.
+- Standard `<input>` — for Monthly Housing Cost (dollar prefix, value "$800")
+- `ButtonGroupBasic` — Back/Next at the bottom. Step 1 has no Back button, only "Next >"
+- Progress bar at top — thin horizontal bar spanning full width, filled to ~16% (Step 1 of 6). Fill color: `#0e6602`. Track: `#D5D0CB`.
+
+**Layout:** Centered content column, max-width ~600px, generous vertical spacing between fields.
+
+---
+
+### Page 2: Quiz — Step 2 (Your credit situation)
+
+**Matching screenshot:** Your uploaded image showing credit score slider with color zones, card count buttons, history dropdown.
+
+**Components used:**
+- `Slider` (credit score variant) — with gradient track (red→green), score displays as large green "680" with "Good" label
+- Segmented button group — "0 / 1 / 2 / 3+" for card count. Selected button: `#0e6602` background with white text. Others: white with `#483C32` border.
+- `<select>` dropdown — for credit history length ("1-2 years")
+- `<input>` number — for applications in last 24 months, with helper text about hard inquiries
+- `ButtonGroupBasic` — Back/Next
+- Progress bar — filled to ~33%
+
+**Zone labels below credit score slider:** Positioned text at the five breakpoints: "300 Poor" (red), "580 Fair" (orange), "670 Good" (gold), "740 V.Good" (light green), "800 Exc." (dark green) — exactly matching your screenshot.
+
+---
+
+### Page 3: Quiz — Step 3 (Let's understand your spending)
+
+**Matching screenshot:** Your uploaded image showing two cards side by side — "Connect Gmail" and "Enter manually"
+
+**Components used:**
+- Two `LiquidCard` components side by side (or regular cards with the glass effect)
+- **Gmail card (left):** Mail icon in a coral/red circle, title "Connect Gmail", description text, yellow warning note "Gmail integration available in the full version", outline button "Use manual instead"
+- **Manual card (right):** Keyboard icon in a green circle, title "Enter manually", description text, filled green button "Enter manually". When selected: green dashed border around the card (matching your screenshot where the right card is highlighted with a green dashed border)
+- `ButtonGroupBasic` — Back/Next
+- Progress bar — filled to ~50%
+
+---
+
+### Page 4: Quiz — Step 3B (Estimate your monthly spending)
+
+**Matching screenshot:** Your uploaded image showing 8 category sliders with emoji icons
+
+**Components used:**
+- 8 instances of `Slider` component, each with:
+  - Category emoji + name on the left (matching your screenshot: fork-and-knife for Dining, shopping cart for Groceries, airplane for Travel, gas pump for Gas & Fuel, movie camera for Entertainment, phone for Subscriptions, shopping bags for Online Shopping, bus for Transportation)
+  - Dollar amount on the right side, updating in real-time (e.g., "$300/mo")
+  - Slider fill: `#0e6602`
+  - Slider track: dark gray `#3A3A3A` (matching your screenshot's dark unfilled track)
+  - Slider thumb: `#0e6602` filled circle
+- Total monthly spend calculation at bottom: "Total estimated monthly spend: **$1,370**" — right-aligned bold number
+- `ButtonGroupBasic` — Back/Next
+- Progress bar — same position as Step 3
+
+---
+
+### Page 5: Quiz — Step 4 (Future spending)
+
+**Not shown in screenshots but described in plan.**
+
+**Components used:**
+- Two large buttons stacked: "My spending will stay about the same" and "My spending is going to change"
+- If "change" selected: `<textarea>` slides in with placeholder text
+- `ButtonGroupBasic` — Back/Next
+- Progress bar — ~67%
+
+---
+
+### Page 6: Quiz — Step 5 (Priorities)
+
+**Matching screenshot:** Your uploaded image showing drag-to-rank list with 6 items
+
+**Components used:**
+- `@dnd-kit/sortable` for the drag-to-rank list
+- Each item is a card with:
+  - Green numbered circle on the left (1, 2, 3, 4, 5, 6) — filled `#0e6602` with white number
+  - Green outlined icon matching the priority (dollar sign for cashback, paper plane for travel, tag for no annual fee, bar chart for building credit, percent for low APR, mountain for premium perks) — all in `#0e6602` outline style
+  - Priority text label
+  - Drag handle (6-dot grip) on the right — in `#7A7067`
+  - Card border: light gray with subtle green tint on hover
+- `ButtonGroupBasic` — Back/Next
+- Progress bar — ~83%
+
+---
+
+### Page 7: Quiz — Step 6 (Summary)
+
+**Matching screenshot:** Your uploaded image showing "You're all set!" with summary grid
+
+**Components used:**
+- 6 summary cards in a 2x3 grid:
+  - Age: "25 years old"
+  - Annual Income: "$45,000"
+  - Credit Score: "680 (Good)"
+  - Credit History: "1-2 years"
+  - Current Cards: "0 cards"
+  - Monthly Spend: "$1,370"
+- Each card: white background, light gray border, label in muted `#7A7067`, value in bold `#483C32`
+- Below the grid: "Your top priorities" card with light green `#E8F5E3` background showing top 3 priorities with green numbered labels and icons
+- `ButtonGroupBasic` — Back button + green "Finish" button
+- Progress bar — 100%
+
+---
+
+### Page 8: Dashboard
+
+**Matching screenshot:** Your uploaded image showing the full dashboard with sidebar, recommendation paragraph, stat cards, recommended cards, and path preview
+
+**Components used:**
+- `AppShell` with `Sidebar` (now visible, dark taupe `#483C32` background)
+- **Row 1 — AI Recommendation:** Green sparkle icon, "Your recommendation" heading, Claude-generated paragraph in a card with subtle left green border accent. Below: "Chat with AI advisor" link in `#0e6602`.
+- **Row 2 — Three stat cards:** Using `FinancialScoreCards` component adapted for:
+  - Credit Score: Large green "680", label "Good", subtext "Self-reported"
+  - Monthly Spend: Large "$1,370", label "Self-reported estimates", subtext "Top category: Groceries ($400/mo)"
+  - Cards You Have: Large "None", label "No cards yet", subtext "Manage in Settings"
+- **Row 3 — Top Recommended Cards:** Three `LiquidCard` instances, each showing:
+  - Card name + issuer
+  - Circular readiness meter (using the `FinancialScoreHalfCircle` adapted as a full circle or the percentage ring shown in your screenshot — green ring at 100%, 100%, 88%)
+  - Annual fee, net annual value
+  - Top reward categories
+- **Row 4 — Path Preview:** Miniature path graph showing "Current" → first recommended card with an arrow
+- **Row 5 — Quick action buttons:** Four buttons in a row: "Explore Cards", "View Path", "Simulator", "Ask AI" — each with an icon, outlined style
+
+---
+
+### Page 9: Path Graph
+
+**Matching screenshot:** Your uploaded image showing the full interactive path graph with Explore/Target toggle, "You Now" at top, branching to multiple cards at bottom
+
+**Components used:**
+- React Flow canvas as the main area
+- **Mode toggle** in top-right: "Explore" / "Target" tabs — selected tab has `#0e6602` text and underline
+- **Legend** at top of canvas: Three circles — green "80%+ ready", blue "50-79%", gray "Below 50%"
+- **"You Now" node** at the top: Large rounded rectangle with dashed green border (`#0e6602`), green text "You Now" centered. This represents the user's current position (no card or current card).
+- **Card nodes:** Each card is a rounded rectangle with:
+  - Left side: Card name (bold, truncated with "...") + issuer name below (muted)
+  - Right side: Circular percentage ring showing readiness (green fill for 80%+, blue for 50-79%, gray for below 50%)
+  - Background color: light green tint `#E8F5E3` for 80%+, light blue tint for 50-79%, light gray for below 50%
+  - Border: `#0e6602` for ready cards, blue for medium, gray for far
+- **Edges (arrows):** Curved Bezier paths in light gray. On hover: glow green `#0e6602`. On click: expand detail panel.
+- **Zoom controls** bottom-right: Three circular buttons (zoom in, fit, zoom out) with `#483C32` icons on white backgrounds
+
+**Path graph layout for Explore mode (matching your screenshot):**
+```
+              [You Now]
+             /         \
+   [Discover it Cash...]  [BoA Customized C...]
+         |                       |
+   [Amex Blue Cash P...]  [Capital One Vent...]
+         |                       |
+   [Chase Sapphire R...]  [American Express...]
+This is the key innovation from your design: The graph shows two parallel paths branching from "You Now", each going through 3 tiers of cards. Users can compare paths side by side. When multiple current cards are selected (from the quiz), multiple starting nodes appear, each with their own branching paths.
+Edge hover tooltip: Small card appearing at the arrow's midpoint showing requirements summary (2-3 lines). Green checkmarks for met requirements, yellow warnings for close, red X for not met.
+Edge click panel: Slides in from the right with full requirements, action items, timeline, pros/cons, and AI paragraph — as described in the original plan.
+
+Part 3: Tailwind config and theme setup
+javascript// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#0e6602',
+          50: '#E8F5E3',
+          100: '#C5E6BC',
+          200: '#9DD490',
+          300: '#6BBF59',
+          400: '#3DA82A',
+          500: '#0e6602',
+          600: '#0B5502',
+          700: '#084401',
+          800: '#063301',
+          900: '#032200',
+        },
+        secondary: {
+          DEFAULT: '#483C32',
+          50: '#F5F3F0',
+          100: '#E5E0DB',
+          200: '#D5D0CB',
+          300: '#B5AEA5',
+          400: '#958C80',
+          500: '#7A7067',
+          600: '#5A4E42',
+          700: '#483C32',
+          800: '#352C24',
+          900: '#231D17',
+        },
+      },
+    },
+  },
+}
+CSS variables (in globals.css):
+css:root {
+  --primary: 130 96% 20%;        /* #0e6602 in HSL */
+  --primary-foreground: 0 0% 100%; /* white */
+  --secondary: 30 18% 24%;        /* #483C32 in HSL */
+  --secondary-foreground: 0 0% 100%;
+  --background: 0 0% 100%;        /* white */
+  --foreground: 30 18% 24%;       /* #483C32 */
+  --muted: 30 10% 93%;            /* #F5F3F0 */
+  --muted-foreground: 30 10% 42%; /* #7A7067 */
+  --accent: 130 96% 92%;          /* #E8F5E3 */
+  --border: 30 10% 82%;           /* #D5D0CB */
+  --ring: 130 96% 20%;            /* #0e6602 */
+}
+
+Part 4: Build sequence for the UI agent
+This is the exact order Claude Code (or any AI coding agent) should build in:
+StepTaskComponents usedDependencies to install first1Project setup: Vite + React + TypeScript + Tailwind + shadcn init—vite, react, tailwindcss, shadcn CLI2Install all NPM deps—@radix-ui/react-slot, @radix-ui/react-slider, class-variance-authority, lucide-react, @xyflow/react, dagre, recharts, @dnd-kit/core, @dnd-kit/sortable, clsx, tailwind-merge3Set up theme: tailwind.config.js colors + globals.css variables——4Copy base components to /components/ui/: button.tsx, badge.tsx, slider.tsx, button-group.tsx, liquid-glass-card.tsx, liquid-glass-button.tsxAll 4 component specs—5Create cn utility at /lib/utils.ts——6Build Sidebar.tsx + AppShell.tsx from dashboard templateDashboard sidebar component—7Set up React Router with all page routes—react-router-dom8Build Quiz system (Steps 1-6) with all inputs, sliders, drag-to-rankSlider, ButtonGroup, dnd-kit sortable—9Build Dashboard page with score cards + recommended cardsFinancialScoreCards, LiquidCard—10Build Card Explorer page with grid + filtersCardTile component (new)—11Build Path Graph page with React FlowReact Flow + Dagre + custom nodes/edges—12Build Card Detail page with full analysisSlider (readiness), score gauge—13Build Spending Analysis page with chartsRecharts—14Build Spending Simulator pageSlider (8 instances) + live calculation—15Build AI Advisor chat pageChat UI (new)—16Build Settings pageSlider, inputs, quiz re-entry—17Wire up card database (cards.json)——18Wire up localStorage persistence——19Wire up Claude API calls—@anthropic-ai/sdk20Run /teach-impeccable → /audit → /arrange → /typeset → /polish on every pageImpeccable skill—
+
+Part 5: Prompts for the UI agent
+These are the exact prompts you'd give Claude Code to build each piece. Each prompt references the component specs and design screenshots:
+Prompt 1 — Project setup + theme:
+
+"Set up a new Vite + React + TypeScript + Tailwind project. Initialize shadcn. Apply the CardPath color theme: primary #0e6602, secondary #483C32, background white. Set up CSS variables and Tailwind config. Install all dependencies: @radix-ui/react-slot, @radix-ui/react-slider, class-variance-authority, lucide-react, @xyflow/react, dagre, recharts, @dnd-kit/core, @dnd-kit/sortable, clsx, tailwind-merge, react-router-dom. Create the /components/ui/ folder and /lib/utils.ts with the cn helper."
+
+Prompt 2 — Copy components + build sidebar:
+
+"Copy the slider, button, button-group, badge, liquid-glass-card, and liquid-glass-button components into /components/ui/. Then build the app shell with a collapsible sidebar using the dashboard template, but change the nav items to: Dashboard (LayoutDashboard icon), Card Explorer (CreditCard), Path Graph (GitBranch), Spending Analysis (BarChart3), Spending Simulator (Zap), AI Advisor (MessageSquare), Settings (Settings). Style the sidebar with #483C32 background, white text, and #0e6602 active state. Add the CardPath logo and 'CP' user avatar circle. Set up React Router so each nav item routes to its page."
+
+Prompt 3 — Build quiz:
+
+"Build a 6-step quiz flow at /quiz route that hides the sidebar. Each step has a green progress bar at the top showing completion. Use the Back/Next button group at the bottom of each step. Step 1: age input, income slider ($0-200K with large green number display), employment status 2x2+1 grid, housing cost input. Step 2: credit score knowledge (Yes/Roughly/No idea buttons), credit score slider with gradient track and zone labels, card count segmented buttons (0/1/2/3+), history dropdown, applications input. Step 3: two side-by-side cards for Gmail vs Manual entry. Step 3B: 8 spending category sliders with emoji icons and dollar amounts. Step 4: stay same / change buttons with conditional textarea. Step 5: drag-to-rank priorities with green numbered circles and icons. Step 6: summary grid showing all entered data with a green priorities card. Save all data to localStorage on finish, then redirect to dashboard."
+
+Prompt 4 — Build path graph:
+
+"Build the Path Graph page using React Flow and Dagre for layout. Add an Explore/Target toggle in the top-right. In Explore mode: place a 'You Now' node at the top (dashed green border, green text), then generate a branching tree of credit card nodes below it — 2 paths side by side, 3 tiers deep. Each card node shows the card name (truncated), issuer, and a circular readiness percentage ring on the right. Nodes are color-tinted: green for 80%+, blue for 50-79%, gray for below 50%. Edges are curved Bezier paths that glow green on hover and show a tooltip with requirements. Clicking an edge opens a detail panel from the right with requirements checklist, action items, timeline, pros, cons, and AI summary. Add zoom controls (zoom in, fit, zoom out) as circular buttons in the bottom-right. Use the CardPath color theme throughout."
+
+Prompt 5 — After each page is built:
+
+"Run /audit on this page, fix all issues found. Then run /arrange to fix layout and spacing. Then /typeset to fix typography hierarchy. Then /polish as a final pass. Do not present the result until all four passes are complete."
