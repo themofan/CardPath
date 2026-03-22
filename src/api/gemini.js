@@ -1,132 +1,126 @@
 import { buildSystemPrompt } from './aiPromptBuilder';
 
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+const PROXY_URL = '/api/gemini';
+const GROQ_DIRECT_URL = 'https://api.groq.com/openai/v1/chat/completions';
+
+async function groqRequest(messages, { maxTokens = 1024, temperature = 0.7 } = {}) {
+  const isDevWithKey = import.meta.env.DEV && import.meta.env.VITE_GROQ_API_KEY;
+
+  const body = {
+    model: 'llama-3.3-70b-versatile',
+    messages,
+    max_tokens: maxTokens,
+    temperature,
+  };
+
+  const response = isDevWithKey
+    ? await fetch(GROQ_DIRECT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`,
+        },
+        body: JSON.stringify(body),
+      })
+    : await fetch(PROXY_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+
+  if (!response.ok) {
+    const err = await response.text();
+    throw new Error(`API error ${response.status}: ${err}`);
+  }
+
+  return response.json();
+}
 
 /**
- * Send a message to Gemini API and get a response
+ * Send a message to Groq and get a response
  */
 export async function askGemini(userMessage) {
   try {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        system_instruction: {
-          parts: [{ text: buildSystemPrompt() }],
-        },
-        contents: [
-          {
-            role: 'user',
-            parts: [{ text: userMessage }],
-          },
-        ],
-        generationConfig: {
-          maxOutputTokens: 1024,
-          temperature: 0.7,
-        },
-      }),
-    });
+    const data = await groqRequest([
+      { role: 'system', content: buildSystemPrompt() },
+      { role: 'user', content: userMessage },
+    ]);
 
-    if (!response.ok) {
-      const err = await response.text();
-      throw new Error(`API error ${response.status}: ${err}`);
-    }
-
-    const data = await response.json();
-    return data.candidates[0].content.parts[0].text;
+    return data.choices[0].message.content;
   } catch (error) {
-    console.error('Gemini API error:', error);
+    console.error('Groq API error:', error);
     throw error;
   }
 }
 
 /**
- * Send a message to Gemini and parse the response as JSON
+ * Send a message and parse the response as JSON
  */
 export async function askGeminiJSON(userMessage) {
   try {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        contents: [
-          {
-            role: 'user',
-            parts: [{ text: userMessage }],
-          },
-        ],
-        generationConfig: {
-          maxOutputTokens: 512,
-          temperature: 0.3,
-        },
-      }),
-    });
+    const data = await groqRequest(
+      [{ role: 'user', content: userMessage }],
+      { maxTokens: 512, temperature: 0.3 }
+    );
 
-    if (!response.ok) {
-      const err = await response.text();
-      throw new Error(`API error ${response.status}: ${err}`);
-    }
-
-    const data = await response.json();
-    const text = data.candidates[0].content.parts[0].text;
-
-    // Extract JSON from response (handles markdown code blocks)
+    const text = data.choices[0].message.content;
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (!jsonMatch) throw new Error('No JSON found in response');
     return JSON.parse(jsonMatch[0]);
   } catch (error) {
-    console.error('Gemini JSON API error:', error);
+    console.error('Groq JSON API error:', error);
     throw error;
   }
 }
 
 /**
- * Multi-turn chat with function calling support.
- * @param {Array} messages - Gemini-format conversation history: [{ role: 'user'|'model'|'function', parts: [...] }]
- * @param {Array} tools - Gemini tool definitions: [{ functionDeclarations: [...] }]
- * @returns {object} The response candidate's content: { parts: [...] } where parts may contain text or functionCall
+ * Multi-turn chat (no function calling — Groq doesn't support Gemini-style tools)
+ * Convert Gemini-format messages to OpenAI-format
  */
-export async function chatWithTools(messages, tools) {
+export async function chatWithTools(geminiMessages, tools) {
   try {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        system_instruction: {
-          parts: [{ text: buildSystemPrompt() }],
-        },
-        contents: messages,
-        tools,
-        generationConfig: {
-          maxOutputTokens: 1024,
-          temperature: 0.7,
-        },
-      }),
-    });
+    // Convert Gemini message format to OpenAI format
+    const messages = [
+      { role: 'system', content: buildSystemPrompt() },
+    ];
 
-    if (!response.ok) {
-      const err = await response.text();
-      throw new Error(`API error ${response.status}: ${err}`);
+    for (const msg of geminiMessages) {
+      if (msg.role === 'user') {
+        const text = msg.parts.map(p => p.text || '').join('');
+        messages.push({ role: 'user', content: text });
+      } else if (msg.role === 'model') {
+        const text = msg.parts.map(p => p.text || '').join('');
+        messages.push({ role: 'assistant', content: text });
+      } else if (msg.role === 'function') {
+        // Include function results as assistant context
+        const results = msg.parts.map(p => {
+          if (p.functionResponse) {
+            return `[Tool result for ${p.functionResponse.name}: ${JSON.stringify(p.functionResponse.response)}]`;
+          }
+          return '';
+        }).join('');
+        messages.push({ role: 'assistant', content: results });
+      }
     }
 
-    const data = await response.json();
-    return data.candidates[0].content;
+    const data = await groqRequest(messages);
+    const content = data.choices[0].message.content;
+
+    // Return in Gemini-compatible format so the rest of the app works
+    return {
+      parts: [{ text: content }],
+    };
   } catch (error) {
-    console.error('Gemini chat API error:', error);
+    console.error('Groq chat API error:', error);
     throw error;
   }
 }
 
 /**
- * Check if API key is configured
+ * Check if API is configured
  */
 export function isAPIConfigured() {
-  return API_KEY && API_KEY.length > 0 && !API_KEY.startsWith('YOUR_');
+  if (!import.meta.env.DEV) return true;
+  const key = import.meta.env.VITE_GROQ_API_KEY || '';
+  return key.length > 0;
 }

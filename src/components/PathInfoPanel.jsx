@@ -166,7 +166,7 @@ export default function PathInfoPanel({ selectedNode, selectedEdge, tree, profil
                 className="w-2.5 h-2.5 rounded-full shrink-0"
                 style={{ backgroundColor: cardGradients[fromCard.id]?.colors[0] || fromCard.imageColor || '#6366f1' }}
               />
-              <span className="text-[#F0EBE3] text-[11px] font-semibold truncate">{fromCard.name.length > 24 ? fromCard.name.slice(0, 24) + '...' : fromCard.name}</span>
+              <span className="text-[#F0EBE3] text-[11px] font-semibold truncate">{fromCard.name.length > 19 ?fromCard.name.slice(0, 19) + '...' : fromCard.name}</span>
             </div>
             <span className="text-primary-300 text-base font-bold shrink-0">{'\u2192'}</span>
             <div className="flex-1 flex items-center gap-1.5 bg-surface rounded-lg p-1.5">
@@ -174,7 +174,7 @@ export default function PathInfoPanel({ selectedNode, selectedEdge, tree, profil
                 className="w-2.5 h-2.5 rounded-full shrink-0"
                 style={{ backgroundColor: cardGradients[toCard.id]?.colors[0] || toCard.imageColor || '#6366f1' }}
               />
-              <span className="text-[#F0EBE3] text-[11px] font-semibold truncate">{toCard.name.length > 24 ? toCard.name.slice(0, 24) + '...' : toCard.name}</span>
+              <span className="text-[#F0EBE3] text-[11px] font-semibold truncate">{toCard.name.length > 19 ?toCard.name.slice(0, 19) + '...' : toCard.name}</span>
             </div>
           </div>
 
